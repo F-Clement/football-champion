@@ -1,1 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato:ital,wght@1,300&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+
+body {
+    font-family: lato, sans-serif;
+    font-weight: bold;
+}
+
+/* Styling our heading */
+
+.heading {
+    text-align: center;
+    font-family: "Bruno Ace SC", sans-serif;
+    font-size: 270%;
+}
+
+/* Styles for our logo */
+.logo {
+    padding-right: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.logo,
+.heading {
+    line-height: 100px;
+}
+
+/* add style to our game div */
+
+.game {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tournaments {
+    float: left;
+    width: 12%;
+    height: 46vh;
+    border: 2px solid black;
+}
+
+.play-game {
+    float: right;
+    width: 85%;
+    height: 46vh;
+    border: 2px solid black;
+}
