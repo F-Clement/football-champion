@@ -58,39 +58,41 @@ body {
 /* Style user and score section */
 .user-and-score {
     width: 100%;
-    height: 15vh;
+    height: 6vh;
     border: 2px solid black;
 }
 
 .username {
-    width: 25%;
+    width: 35%;
     float: left;
     border: 1px solid black;
+    box-sizing: border-box;
 }
 
 .user-score {
-    width: 70%;
+    width: 65%;
     float: right;
-    border: 1px solid black;
+
 }
 
 /*Style for question and answer section*/
 
 .question-answer-area {
     width: 100%;
+    height: 15vh;
     border: 2px solid black;
 }
 
 .questions {
     text-align: center;
-    line-height: 4vh;
+    line-height: 5vh;
 }
 
 #answer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 5vh;
+    height: 7vh;
 }
 
 #submit-answer {
@@ -103,21 +105,33 @@ body {
 
 .correction {
     width: 100%;
+    height: 25vh;
 }
 
 .correct-answer {
+    display: block;
     float: left;
     text-align: center;
     width: 40%;
-    height: 19vh;
+    height: 10vh;
     border: 1px solid black;
     box-sizing: border-box;
+}
+
+.reviews {
+    float: left;
+    display: block;
+    width: 40%;
+    height: 14vh;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .correct-answer-image {
     float: right;
     width: 60%;
     border: 1px solid black;
-    height: 19vh;
+    height: 24vh;
     box-sizing: border-box;
 }
