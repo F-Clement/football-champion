@@ -83,16 +83,41 @@ body {
 
 .questions {
     text-align: center;
+    line-height: 4vh;
 }
 
 #answer {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 5vh;
 }
 
 #submit-answer {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Styles for correction area */
+
+.correction {
+    width: 100%;
+}
+
+.correct-answer {
+    float: left;
+    text-align: center;
+    width: 40%;
+    height: 19vh;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.correct-answer-image {
+    float: right;
+    width: 60%;
+    border: 1px solid black;
+    height: 19vh;
+    box-sizing: border-box;
 }
