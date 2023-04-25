@@ -73,3 +73,26 @@ body {
     float: right;
     border: 1px solid black;
 }
+
+/*Style for question and answer section*/
+
+.question-answer-area {
+    width: 100%;
+    border: 2px solid black;
+}
+
+.questions {
+    text-align: center;
+}
+
+#answer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submit-answer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
