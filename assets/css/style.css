@@ -59,6 +59,10 @@ body {
     box-sizing: border-box;
 }
 
+button::after {
+    content: attr(data-type);
+}
+
 .play-game {
     float: right;
     width: 85%;
@@ -103,9 +107,10 @@ body {
 
 #answer {
     display: block;
+    border: 1px black;
     margin-left: auto;
     margin-right: auto;
-    height: 7vh;
+    height: 4vh;
 }
 
 #submit-answer {
