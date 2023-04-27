@@ -29,7 +29,13 @@ function runGame(tournament) {
     let ballonDorYear = Math.floor(Math.random() * 22) + 2001;
 
     if (tournament === "world-cup") {
-        worldCupQuestions(worldCupYear);
+        worldCupQuestions(worldCupYear, tournament);
+    } else if (tournament === "afcon") {
+        afconQuestions(afconYear, tournament);
+    } else if (tournament === "champions-league") {
+        championsLeagueQuestions(champLeagueYear, tournament);
+    } else if (tournament === "ballon-d'or") {
+        ballonDorQuestions(ballonDorYear, tournament);
     } else {
         alert(`Unknown Tournament: ${tournament}`);
         throw `Unknown Tournament: ${tournament}`;
@@ -57,19 +63,23 @@ function incrementIncorrectAnswer() {
 
 }
 
-function worldCupQuestions(worldCupYear) {
+function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
+    document.getElementById("tournament").textContent = tournament;
 }
 
-function afconQuestions() {
-
+function afconQuestions(afconYear, tournament) {
+    document.getElementById("year").textContent = afconYear;
+    document.getElementById("tournament").textContent = tournament;
 }
 
-function championsLeagueQuestions() {
-
+function championsLeagueQuestions(champLeagueYear, tournament) {
+    document.getElementById("year").textContent = champLeagueYear;
+    document.getElementById("tournament").textContent = tournament;
 }
 
-function ballonDorQuestions() {
-
+function ballonDorQuestions(ballonDorYear, tournament) {
+    document.getElementById("year").textContent = ballonDorYear;
+    document.getElementById("tournament").textContent = tournament;
 }
 
