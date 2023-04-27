@@ -11,20 +11,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Review submitted.");
             } else {
                 let tournament = this.getAttribute("data-type");
-                alert(`you selected ${tournament} tournament`);
+                runGame(tournament);
             }
         });
     }
+
+    runGame("world-cup");
 });
 
 
-function runGame() {
+function runGame(tournament) {
     // Generate the years we had tournaments.
 
     let worldCupYear = Math.floor(Math.random() * 5) * 4 + 2002;
     let afconYear = Math.floor(Math.random() * 11) * 2 + 2000;
     let champLeagueYear = Math.floor(Math.random() * 22) + 2001;
     let ballonDorYear = Math.floor(Math.random() * 22) + 2001;
+
+    if (tournament === "world-cup") {
+        worldCupQuestions(worldCupYear);
+    } else {
+        alert(`Unknown Tournament: ${tournament}`);
+        throw `Unknown Tournament: ${tournament}`;
+    }
+
 }
 
 function generateQuestion() {
@@ -47,8 +57,8 @@ function incrementIncorrectAnswer() {
 
 }
 
-function worldCupQuestions() {
-
+function worldCupQuestions(worldCupYear) {
+    document.getElementById("year").textContent = worldCupYear;
 }
 
 function afconQuestions() {
