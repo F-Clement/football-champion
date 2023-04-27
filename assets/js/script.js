@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             if (this.getAttribute("class") === "login") {
                 alert("User Logged inn.");
             } else if (this.getAttribute("class") === "submit-answer") {
@@ -19,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function runGame() {
+    // Generate the years we had tournaments.
 
+    let worldCupYear = Math.floor(Math.random() * 5) * 4 + 2002;
+    let afconYear = Math.floor(Math.random() * 11) * 2 + 2000;
+    let champLeagueYear = Math.floor(Math.random() * 22) + 2001;
+    let ballonDorYear = Math.floor(Math.random() * 22) + 2001;
 }
 
 function generateQuestion() {
