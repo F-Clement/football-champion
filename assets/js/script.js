@@ -24,9 +24,9 @@ function runGame(tournament) {
     // Generate the years we had tournaments.
 
     let worldCupYear = Math.floor(Math.random() * 5) * 4 + 2002;
-    let afconYear = Math.floor(Math.random() * 11) * 2 + 2000;
-    let champLeagueYear = Math.floor(Math.random() * 22) + 2001;
-    let ballonDorYear = Math.floor(Math.random() * 22) + 2001;
+    let afconYear = Math.floor(Math.random() * 6) * 2 + 2000;
+    let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
+    let ballonDorYear = Math.floor(Math.random() * 13) + 2010;
 
     if (tournament === "world-cup") {
         worldCupQuestions(worldCupYear, tournament);
@@ -63,6 +63,57 @@ function searchAnswer() {
         };
 
         return [(worldCupChampions[year]), "world-cup"];
+    } else if (tournament === "afcon") {
+        let year = document.getElementById('year').innerText;
+        let afconChampions = {
+            2000: 'Cameroon',
+            2002: 'Cameroon',
+            2004: 'Tunisia',
+            2006: 'Egypt',
+            2008: 'Egypt',
+            2010: 'Egypt',
+            2012: 'Zambia',
+
+        };
+        return [(afconChampions[year]), "afcon"];
+    } else if (tournament === "champions-league") {
+        let year = document.getElementById('year').innerText;
+        let championsLeagueChamps = {
+            2010: 'Inter Milan',
+            2011: 'Barcelona',
+            2012: 'Chelsea',
+            2013: 'Bayer',
+            2014: 'Real Madrid',
+            2015: 'Barcelona',
+            2016: 'Real Madrid',
+            2017: 'Real Madrid',
+            2018: 'Real Madrid',
+            2019: 'Liverpool',
+            2020: 'Bayern',
+            2021: 'Chealsea',
+            2022: 'Real Madrid',
+        };
+        return [(championsLeagueChamps[year]), "champions-league"];
+    } else if (tournament === "ballon-d'or") {
+        let year = document.getElementById('year').innerText;
+        let ballonDorWinner = {
+            2010: 'Lionel Messi',
+            2011: 'Lionel Messi',
+            2012: 'Lionel Messi',
+            2013: 'Cristiano Ronaldo',
+            2014: 'Cristiano Ronaldo',
+            2015: 'Lionel Messi',
+            2016: 'Cristiano Ronaldo',
+            2017: 'Cristiano Ronaldo',
+            2018: 'Luka Modrić',
+            2019: 'Lionel Messi',
+            2020: 'Not Awarded',
+            2021: 'Lionel Messi',
+            2022: 'Karim Benzema',
+        };
+    } else {
+        alert(`Tournament Uknown`);
+        throw (`Unknown tournament! Aborting....`);
     }
 
 }
