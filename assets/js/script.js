@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (this.getAttribute("class") === "login") {
                 alert("User Logged inn.");
             } else if (this.getAttribute("class") === "submit-answer") {
-                alert("Answer Submitted!");
+                checkAnswer();
             } else if (this.getAttribute("class") === "submit-review") {
                 alert("Review submitted.");
             } else {
@@ -49,9 +49,37 @@ function generateQuestion() {
 
 function searchAnswer() {
 
+    let tournament = document.getElementById('tournament').innerText;
+
+    if (tournament === "world-cup") {
+        let year = document.getElementById('year').innerText;
+        let worldCupChampions = {
+            2002: 'Brazil',
+            2006: 'Italy',
+            2010: 'Spain',
+            2014: 'Germany',
+            2018: 'France',
+            2022: 'Argentina',
+        };
+
+        return [(worldCupChampions[year]), "world-cup"];
+    }
+
 }
 
 function checkAnswer() {
+    let userAnswer = document.getElementById("answer").value;
+    let correctAnswer = searchAnswer();
+    let answerIsCorrect = userAnswer === correctAnswer[0];
+
+
+    if (answerIsCorrect) {
+        alert("Correct Answer");
+    } else {
+        alert("Wrong Answer");
+    }
+
+
 
 }
 
@@ -66,6 +94,8 @@ function incrementIncorrectAnswer() {
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
+
+    searchAnswer(tournament);
 }
 
 function afconQuestions(afconYear, tournament) {
