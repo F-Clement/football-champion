@@ -50,9 +50,9 @@ function generateQuestion() {
 function searchAnswer() {
 
     let tournament = document.getElementById('tournament').innerText;
+    let year = document.getElementById('year').innerText;
 
     if (tournament === "world-cup") {
-        let year = document.getElementById('year').innerText;
         let worldCupChampions = {
             2002: 'Brazil',
             2006: 'Italy',
@@ -64,7 +64,6 @@ function searchAnswer() {
 
         return [(worldCupChampions[year]), "world-cup"];
     } else if (tournament === "afcon") {
-        let year = document.getElementById('year').innerText;
         let afconChampions = {
             2000: 'Cameroon',
             2002: 'Cameroon',
@@ -77,7 +76,6 @@ function searchAnswer() {
         };
         return [(afconChampions[year]), "afcon"];
     } else if (tournament === "champions-league") {
-        let year = document.getElementById('year').innerText;
         let championsLeagueChamps = {
             2010: 'Inter Milan',
             2011: 'Barcelona',
@@ -95,7 +93,6 @@ function searchAnswer() {
         };
         return [(championsLeagueChamps[year]), "champions-league"];
     } else if (tournament === "ballon-d'or") {
-        let year = document.getElementById('year').innerText;
         let ballonDorWinner = {
             2010: 'Lionel Messi',
             2011: 'Lionel Messi',
@@ -126,27 +123,31 @@ function checkAnswer() {
 
     if (answerIsCorrect) {
         alert("Correct Answer");
+        incrementCorrectAnswer();
+        document.getElementById("correction").innerText = correctAnswer[0];
     } else {
         alert("Wrong Answer");
+        incrementIncorrectAnswer();
+        document.getElementById("correction").innerText = correctAnswer[0];
     }
 
-
+    runGame(correctAnswer[1]);
 
 }
 
 function incrementCorrectAnswer() {
-
+    let currentScore = parseInt(document.getElementById("correctAnswers").innerText);
+    document.getElementById("correctAnswers").innerText = ++currentScore;
 }
 
 function incrementIncorrectAnswer() {
-
+    let currentScore = parseInt(document.getElementById("incorrectAnswers").innerText);
+    document.getElementById("incorrectAnswers").innerText = ++currentScore;
 }
 
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
-
-    searchAnswer(tournament);
 }
 
 function afconQuestions(afconYear, tournament) {
