@@ -77,7 +77,7 @@ function searchAnswer() {
             2010: 'Inter Milan',
             2011: 'Barcelona',
             2012: 'Chelsea',
-            2013: 'Bayer',
+            2013: 'Bayern',
             2014: 'Real Madrid',
             2015: 'Barcelona',
             2016: 'Real Madrid',
@@ -166,7 +166,38 @@ function checkAnswer() {
         case 'Nigeria':
             document.getElementById("champions-image").innerHTML = `<img src="../assets/images/nigeria.png"/>`;
             break;
-
+        case 'Barcelona':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/barcelona.jpg"/>`;
+            break;
+        case 'Bayern':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/bayern.jpg"/>`;
+            break;
+        case 'Chelsea':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/chelsea.jpg"/>`;
+            break;
+        case 'Inter Milan':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/inter-milan.jpg"/>`;
+            break;
+        case 'Liverpool':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/liverpool.jpg"/>`;
+            break;
+        case 'Real Madrid':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/real-madrid.jpg"/>`;
+            break;
+        case 'Lionel Messi':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/lionel-messi.jpg"/>`;
+            break;
+        case 'Cristiano Ronaldo':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/christiano.jpg"/>`;
+            break;
+        case 'Karim Benzema':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/benzema.jpg"/>`;
+            break;
+        case 'Luka Modrić':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/luka.jpg"/>`;
+            break;
+        default:
+            document.getElementById("champions-image").innerHTML = `NOT AWARDED`;
 
     }
 
