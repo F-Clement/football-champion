@@ -148,6 +148,24 @@ function checkAnswer() {
         case 'Argentina':
             document.getElementById("champions-image").innerHTML = `<img src="../assets/images/argentina.jpg"/>`;
             break;
+        case 'Cameroon':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/cameroon.jpeg"/>`;
+            break;
+        case 'Egypt':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/egypt.jpg"/>`;
+            break;
+        case 'Tunisia':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/tunisia.jpg"/>`;
+            break;
+        case 'Zambia':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/zambia.jpg"/>`;
+            break;
+        case 'Senegal':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/senegal.webp"/>`;
+            break;
+        case 'Nigeria':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/nigeria.png"/>`;
+            break;
 
 
     }
@@ -175,7 +193,7 @@ function worldCupQuestions(worldCupYear, tournament) {
 function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("suggested-answers").innerHTML = `Cameroon,  Tunisia,  Egypt,  Zambia,  Nigeria.`;
+    document.getElementById("suggested-answers").innerHTML = `Cameroon,  Tunisia,  Egypt,  Zambia,  Nigeria,  Senegal.`;
 }
 
 function championsLeagueQuestions(champLeagueYear, tournament) {
