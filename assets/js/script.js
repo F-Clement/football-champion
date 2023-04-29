@@ -62,6 +62,7 @@ function searchAnswer() {
             2022: 'Argentina',
         };
 
+
         return [(worldCupChampions[year]), "world-cup"];
     } else if (tournament === "afcon") {
         let afconChampions = {
@@ -122,13 +123,13 @@ function checkAnswer() {
 
 
     if (answerIsCorrect) {
-        alert("Correct Answer");
+        alert("Yeah!!! You got it right.");
+        document.getElementById("correction").innerText = correctAnswer[0];
         incrementCorrectAnswer();
-        document.getElementById("correction").innerText = correctAnswer[0];
     } else {
-        alert("Wrong Answer");
-        incrementIncorrectAnswer();
+        alert("Oh no... that is not the correct answer.");
         document.getElementById("correction").innerText = correctAnswer[0];
+        incrementIncorrectAnswer();
     }
 
     runGame(correctAnswer[1]);
@@ -148,20 +149,24 @@ function incrementIncorrectAnswer() {
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
+    document.getElementById("suggested-answers").innerHTML = `Brazil, Italy, Spain, Germany, France, Argentina.`;
 }
 
 function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
+    document.getElementById("suggested-answers").innerHTML = `Cameroon,  Tunisia,  Egypt,  Zambia,  Nigeria.`;
 }
 
 function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
+    document.getElementById("suggested-answers").innerHTML = `Barcelona,  Real Madrid,  Inter Milan,  Chelsea,  Bayern.`;
 }
 
 function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
+    document.getElementById("suggested-answers").innerHTML = `Lionel Messi,  Christiano Ronaldo,  Luka Modrić,  Karim Benzema,  Not Awarded.`;
 }
 
