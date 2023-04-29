@@ -43,10 +43,6 @@ function runGame(tournament) {
 
 }
 
-function generateQuestion() {
-
-}
-
 function searchAnswer() {
 
     let tournament = document.getElementById('tournament').innerText;
@@ -109,6 +105,7 @@ function searchAnswer() {
             2021: 'Lionel Messi',
             2022: 'Karim Benzema',
         };
+        return [(ballonDorWinner[year]), "ballon-d'or"];
     } else {
         alert(`Tournament Uknown`);
         throw (`Unknown tournament! Aborting....`);
@@ -130,6 +127,29 @@ function checkAnswer() {
         alert("Oh no... that is not the correct answer.");
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementIncorrectAnswer();
+    }
+
+    switch (correctAnswer[0]) {
+        case 'Brazil':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/brazil.jpg"/>`;
+            break;
+        case 'Italy':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/italy.jpg"/>`;
+            break;
+        case 'Spain':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/spain.jpg"/>`;
+            break;
+        case 'Germany':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/germany.jpg"/>`;
+            break;
+        case 'France':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/france.jpg"/>`;
+            break;
+        case 'Argentina':
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/argentina.jpg"/>`;
+            break;
+
+
     }
 
     runGame(correctAnswer[1]);
