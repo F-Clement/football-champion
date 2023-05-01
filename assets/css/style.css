@@ -4,6 +4,7 @@
     border: 0;
     margin: 0;
     padding: 0;
+
 }
 
 /* Global Styles */
@@ -40,6 +41,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
+
 }
 
 .tournaments {
@@ -60,6 +62,17 @@ body {
     box-sizing: border-box;
 }
 
+#champions-image {
+    overflow: hidden;
+}
+
+#football-champions {
+    width: 392px;
+    height: 175px;
+    object-fit: fill;
+
+}
+
 button::after {
     content: attr(data-type);
 }
@@ -70,6 +83,7 @@ button::after {
     height: 46vh;
     border: 2px solid black;
     box-sizing: border-box;
+    background-color: rgb(247, 244, 244);
 }
 
 
@@ -81,7 +95,7 @@ button::after {
 }
 
 .username {
-    width: 35%;
+    width: 70%;
     float: left;
     box-sizing: border-box;
     padding-left: 4px;
@@ -90,13 +104,12 @@ button::after {
 
 .login {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 28%;
+
 }
 
 .user-score {
-    width: 65%;
-    float: right;
+    width: 30%;
 
 }
 
@@ -170,7 +183,9 @@ button::after {
 }
 
 button:hover {
-    background-color: blue;
+    background-color: grey;
     border: 1px solid black;
+    color: white;
+    border-radius: 5%;
 
 }
