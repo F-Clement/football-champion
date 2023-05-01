@@ -37,7 +37,7 @@ body {
 /* add style to our game div */
 
 .game {
-    width: 50%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     border: 1px solid black;
@@ -104,7 +104,7 @@ button::after {
 
 .login {
     display: block;
-    margin-left: 28%;
+    margin-left: 25%;
 
 }
 
@@ -148,6 +148,10 @@ button::after {
     height: 25vh;
 }
 
+#correction {
+    text-align: center;
+}
+
 .correct-answer {
     display: block;
     float: left;
@@ -165,7 +169,7 @@ button::after {
     height: 14vh;
     border: 2px solid black;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .submit-review {
@@ -187,5 +191,44 @@ button:hover {
     border: 1px solid black;
     color: white;
     border-radius: 5%;
+
+}
+
+.login,
+.submit-answer,
+.submit-review {
+    padding: 0 2px;
+    border-radius: 10%;
+    background-color: rgb(176, 233, 242);
+    color: rgb(40, 76, 85);
+}
+
+@media screen and (max-width: 1200px) {
+    .game {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid black;
+
+    }
+
+    .tournaments {
+        float: left;
+        width: 14%;
+        height: 46vh;
+        border: 2px solid black;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    .play-game {
+        float: right;
+        width: 85%;
+        height: 46vh;
+        border: 2px solid black;
+        box-sizing: border-box;
+        background-color: rgb(247, 244, 244);
+    }
 
 }
