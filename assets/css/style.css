@@ -341,7 +341,7 @@ button:hover {
     .play-game {
         display: block;
         width: 100%;
-        height: 46vh;
+        height: 100%;
 
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
