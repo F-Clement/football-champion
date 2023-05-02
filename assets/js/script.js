@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function runGame(tournament) {
     // Generate the years we had tournaments.
 
-    let worldCupYear = Math.floor(Math.random() * 5) * 4 + 2002;
-    let afconYear = Math.floor(Math.random() * 6) * 2 + 2000;
+    let worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
+    let afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
     let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
     let ballonDorYear = Math.floor(Math.random() * 13) + 2010;
 
