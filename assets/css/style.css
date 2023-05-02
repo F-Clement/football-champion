@@ -348,7 +348,7 @@ button:hover {
     }
 
     .username {
-        width: 50%;
+        width: 40%;
         float: left;
         box-sizing: border-box;
         padding-left: 4px;
@@ -356,7 +356,7 @@ button:hover {
     }
 
     .user-score {
-        width: 50%;
+        width: 60%;
     }
 
     .question-answer-area {
@@ -364,6 +364,12 @@ button:hover {
         height: 25vh;
 
     }
+
+    input {
+        width: 40%;
+    }
+
+    ;
 
 
 }
