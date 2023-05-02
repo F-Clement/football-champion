@@ -94,6 +94,7 @@ button::after {
 .user-and-score {
     width: 100%;
     height: 6vh;
+    border-bottom: 2px solid black;
 
 }
 
@@ -357,6 +358,7 @@ button:hover {
 
     .user-score {
         width: 60%;
+        float: right;
     }
 
     .question-answer-area {
@@ -368,8 +370,6 @@ button:hover {
     input {
         width: 40%;
     }
-
-    ;
 
 
 }
