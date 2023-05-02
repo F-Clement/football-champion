@@ -82,7 +82,7 @@ button::after {
     float: right;
     width: 85%;
     height: 46vh;
-    border: 2px solid black;
+
     box-sizing: border-box;
     background-color: rgb(247, 244, 244);
 }
@@ -92,7 +92,7 @@ button::after {
 .user-and-score {
     width: 100%;
     height: 6vh;
-    border: 2px solid black;
+
 }
 
 .username {
@@ -118,7 +118,7 @@ button::after {
 .question-answer-area {
     width: 100%;
     height: 15vh;
-    border: 2px solid black;
+
 }
 
 .questions {
@@ -128,7 +128,7 @@ button::after {
 
 #answer {
     display: block;
-    border: 1px black;
+
     margin-left: auto;
     margin-right: auto;
     height: 4vh;
@@ -154,7 +154,7 @@ button::after {
     float: left;
     width: 40%;
     height: 10vh;
-    border: 1px solid black;
+
     box-sizing: border-box;
 }
 
@@ -163,7 +163,7 @@ button::after {
     display: block;
     width: 40%;
     height: 14vh;
-    border: 2px solid black;
+
     box-sizing: border-box;
     overflow: auto;
 }
@@ -177,7 +177,7 @@ button::after {
 .correct-answer-image {
     float: right;
     width: 60%;
-    border: 2px solid black;
+
     height: 24vh;
     box-sizing: border-box;
 }
@@ -204,7 +204,7 @@ button:hover {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid black;
+
 
     }
 
@@ -222,7 +222,7 @@ button:hover {
         float: right;
         width: 89%;
         height: 46vh;
-        border: 2px solid black;
+
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -234,7 +234,7 @@ button:hover {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid black;
+
 
     }
 
@@ -252,7 +252,7 @@ button:hover {
         float: right;
         width: 85%;
         height: 46vh;
-        border: 2px solid black;
+
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -303,6 +303,7 @@ button:hover {
         width: 15%;
         height: 14vh;
         margin-right: 10%;
+
     }
 
     .play-game {
