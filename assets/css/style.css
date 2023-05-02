@@ -13,6 +13,7 @@ body {
     font-family: lato, sans-serif;
     font-weight: bold;
 
+
 }
 
 /* Styling our heading */
@@ -41,6 +42,7 @@ body {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid black;
 
 }
 
@@ -259,8 +261,38 @@ button:hover {
 
 }
 
-
 @media screen and (max-width: 700px) {
+    .game {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    }
+
+    .tournaments {
+        float: left;
+        width: 14%;
+        height: 46vh;
+        border: 2px solid black;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    .play-game {
+        float: right;
+        width: 85%;
+        height: 46vh;
+
+        box-sizing: border-box;
+        background-color: rgb(247, 244, 244);
+    }
+
+}
+
+
+@media screen and (max-width: 550px) {
 
     .logo {
         padding-right: 10px;
