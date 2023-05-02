@@ -41,7 +41,6 @@ body {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
 
 }
 
@@ -149,14 +148,10 @@ button::after {
     height: 25vh;
 }
 
-#correction {
-    text-align: center;
-}
 
 .correct-answer {
     display: block;
     float: left;
-    text-align: center;
     width: 40%;
     height: 10vh;
     border: 1px solid black;
@@ -286,7 +281,7 @@ button:hover {
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
-        border: 1px solid black;
+
 
     }
 
@@ -296,7 +291,7 @@ button:hover {
         flex-direction: row;
         justify-content: center;
         height: 14vh;
-        border: 2px solid black;
+
         overflow-y: auto;
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
@@ -314,7 +309,7 @@ button:hover {
         display: block;
         width: 100%;
         height: 46vh;
-        border: 2px solid black;
+
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -334,7 +329,7 @@ button:hover {
     .question-answer-area {
         width: 100%;
         height: 25vh;
-        border: 2px solid black;
+
     }
 
 
