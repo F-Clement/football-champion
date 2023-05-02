@@ -131,70 +131,70 @@ function checkAnswer() {
 
     switch (correctAnswer[0]) {
         case 'Brazil':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/brazil.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/brazil.jpg" alt="Picture of Brazil National Team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Italy':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/italy.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/italy.jpg" alt="Picture of Italian National Team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Spain':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/spain.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/spain.jpg" alt="Picture of Spains national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Germany':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/germany.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/germany.jpg" alt="Picture of German national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'France':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/france.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/france.jpg" alt="Picture of France national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Argentina':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/argentina.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/argentina.jpg" alt = "Picture of Argentines national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Cameroon':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/cameroon.jpeg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/cameroon.jpeg" alt="Picture of Cameroon national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Egypt':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/egypt.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/egypt.jpg" alt = "Picture of the Egyptian national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Tunisia':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/tunisia.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/tunisia.jpg" alt="Picture of Tunisias national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Zambia':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/zambia.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/zambia.jpg" alt="Picture of Zambian national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Senegal':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/senegal.webp" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/senegal.webp" alt="Picture of Senegals national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Nigeria':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/nigeria.png" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/nigeria.png" alt = "Picture of nigerians national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Barcelona':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/barcelona.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/barcelona.jpg" alt= "Picture of Barcelonas team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Bayern':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/bayern.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/bayern.jpg" alt="Picture of Bayerns team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Chelsea':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/chelsea.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/chelsea.jpg" alt = "Picture of Chelseas football team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Inter Milan':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/inter-milan.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/inter-milan.jpg" alt="Picture of Milans team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Liverpool':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/liverpool.jpg"width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/liverpool.jpg" alt = "Picture of Liverpools team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Real Madrid':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/real-madrid.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/real-madrid.jpg" alt = Picture of Real Madrids team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Lionel Messi':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/lionel-messi.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/lionel-messi.jpg" alt="Picture of Lionel Messi with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Cristiano Ronaldo':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/christiano.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/christiano.jpg" alt = "Picture of Christiano Ronaldo with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Karim Benzema':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/benzema.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/benzema.jpg" alt="Picture of Benzema with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Luka Modrić':
-            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/luka.jpg" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="../assets/images/luka.jpg" alt = "Picture of Modric with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
         default:
             document.getElementById("champions-image").innerHTML = `NOT AWARDED`;
