@@ -25,6 +25,10 @@ body {
 }
 
 /* Styles for our logo */
+a {
+    text-decoration: none;
+}
+
 .logo {
     padding-right: 10px;
     height: 40px;
