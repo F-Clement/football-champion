@@ -114,7 +114,7 @@ function searchAnswer() {
 }
 
 function checkAnswer() {
-    let userAnswer = document.getElementById("answers").value;
+    let userAnswer = document.getElementById("answer").value;
     let correctAnswer = searchAnswer();
     let answerIsCorrect = userAnswer === correctAnswer[0];
 
@@ -124,7 +124,7 @@ function checkAnswer() {
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementCorrectAnswer();
     } else {
-        alert`("Oh no.. that is not the correct answer.")`;
+        alert("Oh no... that is not the correct answer.");
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementIncorrectAnswer();
     }
