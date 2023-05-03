@@ -131,9 +131,9 @@ button::after {
 
 #answer {
     display: block;
-
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5px;
     height: 4vh;
 }
 
@@ -369,6 +369,12 @@ button:hover {
 
     input {
         width: 40%;
+    }
+
+    .questions {
+        text-align: center;
+        line-height: 5vh;
+        margin-bottom: 5vh;
     }
 
 
