@@ -114,7 +114,7 @@ function searchAnswer() {
 }
 
 function checkAnswer() {
-    let userAnswer = document.getElementById("answer").value;
+    let userAnswer = document.getElementById("answers").value;
     let correctAnswer = searchAnswer();
     let answerIsCorrect = userAnswer === correctAnswer[0];
 
@@ -124,7 +124,7 @@ function checkAnswer() {
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementCorrectAnswer();
     } else {
-        alert("Oh no... that is not the correct answer.");
+        alert`("Oh no.. that is not the correct answer.")`;
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementIncorrectAnswer();
     }
@@ -218,24 +218,51 @@ function incrementIncorrectAnswer() {
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("suggested-answers").innerHTML = `Brazil, Italy, Spain, Germany, France, Argentina.`;
+    document.getElementById("answers").innerHTML = `<select id="answer" name="answer">
+    <option value="Brazil">Brazil</option>
+    <option value="Italy">Italy</option>
+    <option value="Spain">Spain</option>
+    <option value="Germany">Germany</option>
+    <option value="France">France</option>
+    <option value="Argentina">Argentina</option>
+    </select>`;
 }
 
 function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("suggested-answers").innerHTML = `Cameroon,  Tunisia,  Egypt,  Zambia,  Nigeria,  Senegal.`;
+    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "Cameroon">Cameroon</option>
+    <option value = "Tunisia">Tunisia</option>
+    <option value = "Egypt">Egypt</option>
+    <option value = "Zambia">Zambia</option>
+    <option value = "Nigeria">Nigeria</option>
+    <option value = "Senegal">Senegal</option>
+    </select>`;
+
 }
 
 function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("suggested-answers").innerHTML = `Barcelona,  Real Madrid,  Inter Milan,  Chelsea,  Bayern.`;
+    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "Barcelona">Barcelona</option>
+    <option value = "Real Madrid">Real Madrid</option>
+    <option value = "Inter Milan">Inter Milan</option>
+    <option value = "Chelsea">Chelsea</option>
+    <option value = "Bayern">Bayern</option>
+    </select>`;
 }
 
 function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("suggested-answers").innerHTML = `Lionel Messi,  Christiano Ronaldo,  Luka Modrić,  Karim Benzema,  Not Awarded.`;
+    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "Lionel Messi">Lionel Messi</option>
+    <option value = "Christiano Ronaldo">Christiano Ronaldo</option>
+    <option value = "Luka Modrić">Luka Modrić</option>
+    <option value = "Karim Benzema">Karim Benzema</option>
+    <option value = "Not Awarded">Not Awarded</option>
+    </select>`;
 }
 
