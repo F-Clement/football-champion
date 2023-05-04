@@ -1,19 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Lato:ital,wght@1,300&display=swap');
 
+/* Global Styles */
+
 * {
     border: 0;
     margin: 0;
     padding: 0;
-
 }
-
-/* Global Styles */
 
 body {
     font-family: lato, sans-serif;
     font-weight: bold;
-
-
 }
 
 /* Styling our heading */
@@ -47,7 +44,6 @@ a {
     margin-left: auto;
     margin-right: auto;
     border: 2px solid black;
-
 }
 
 .tournaments {
@@ -57,13 +53,11 @@ a {
     border: 2px solid black;
     overflow-y: auto;
     overflow-x: hidden;
-
 }
 
 
 /* styles for images */
 .tournaments img {
-    padding: 1px 0 0 5px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -77,7 +71,6 @@ a {
     width: 392px;
     height: 175px;
     object-fit: fill;
-
 }
 
 button::after {
@@ -88,7 +81,6 @@ button::after {
     float: right;
     width: 85%;
     height: 46vh;
-
     box-sizing: border-box;
     background-color: rgb(247, 244, 244);
 }
@@ -99,7 +91,6 @@ button::after {
     width: 100%;
     height: 6vh;
     border-bottom: 2px solid black;
-
 }
 
 .username {
@@ -107,7 +98,6 @@ button::after {
     float: left;
     box-sizing: border-box;
     padding-left: 4px;
-
 }
 
 .login {
@@ -155,7 +145,6 @@ button::after {
     height: 25vh;
 }
 
-
 .correct-answer {
     display: block;
     float: left;
@@ -165,12 +154,20 @@ button::after {
     box-sizing: border-box;
 }
 
+.correct-answer-image {
+    float: right;
+    width: 60%;
+
+    height: 24vh;
+    box-sizing: border-box;
+}
+
+/* Style review area */
 .reviews {
     float: left;
     display: block;
     width: 40%;
     height: 14vh;
-
     box-sizing: border-box;
     overflow: auto;
 }
@@ -181,13 +178,7 @@ button::after {
     margin-right: auto;
 }
 
-.correct-answer-image {
-    float: right;
-    width: 60%;
-
-    height: 24vh;
-    box-sizing: border-box;
-}
+/* Style buttons */
 
 button:hover {
     background-color: grey;
@@ -206,13 +197,14 @@ button:hover {
     color: rgb(40, 76, 85);
 }
 
+/* Adding media queries for responsiveness */
+
+/* Media query for max screen size of 1200px */
 @media screen and (max-width: 1200px) {
     .game {
         width: 70%;
         margin-left: auto;
         margin-right: auto;
-
-
     }
 
     .tournaments {
@@ -222,27 +214,24 @@ button:hover {
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
-
     }
 
     .play-game {
         float: right;
         width: 89%;
         height: 46vh;
-
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
 
 }
 
+/* Media query for screen size of 900px maximum*/
 @media screen and (max-width: 900px) {
     .game {
         width: 80%;
         margin-left: auto;
         margin-right: auto;
-
-
     }
 
     .tournaments {
@@ -252,27 +241,24 @@ button:hover {
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
-
     }
 
     .play-game {
         float: right;
         width: 85%;
         height: 46vh;
-
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
 
 }
 
+/* Media query for screen size of maximum 700px */
 @media screen and (max-width: 700px) {
     .game {
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-
-
     }
 
     .tournaments {
@@ -282,21 +268,19 @@ button:hover {
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
-
     }
 
     .play-game {
         float: right;
         width: 85%;
         height: 46vh;
-
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
 
 }
 
-
+/* Media query for small screens like mobile or mini tablets */
 @media screen and (max-width: 550px) {
 
     .logo {
@@ -311,15 +295,12 @@ button:hover {
         background-color: rgb(247, 244, 244);
     }
 
-
     .game {
         width: 100%;
         height: 100%;
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
-
-
     }
 
     .tournaments {
@@ -328,11 +309,9 @@ button:hover {
         flex-direction: row;
         justify-content: center;
         height: 14vh;
-
         overflow-y: auto;
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
-
     }
 
     .tournaments>div {
@@ -340,14 +319,12 @@ button:hover {
         width: 15%;
         height: 14vh;
         margin-right: 10%;
-
     }
 
     .play-game {
         display: block;
         width: 100%;
         height: 100%;
-
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -357,7 +334,6 @@ button:hover {
         float: left;
         box-sizing: border-box;
         padding-left: 4px;
-
     }
 
     .user-score {
@@ -368,7 +344,6 @@ button:hover {
     .question-answer-area {
         width: 100%;
         height: 25vh;
-
     }
 
     input {
@@ -380,6 +355,5 @@ button:hover {
         line-height: 5vh;
         margin-bottom: 5vh;
     }
-
 
 }

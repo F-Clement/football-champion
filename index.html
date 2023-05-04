@@ -19,6 +19,7 @@
         </h1>
     </a>
     <div class="game">
+        <!--The different tournaments which when clicked will pose corresponding set of questions-->
         <div class="tournaments">
             <div class="world-cup">
                 <button data-type="world-cup"><img src=" assets/images/world-cup.jpg" alt="World Cup"></button>
@@ -34,20 +35,20 @@
                 <button data-type="ballon-d'or"><img src="assets/images/ballon-d'Or.jpg" alt="Ballon d'Or"></button>
             </div>
         </div>
+        <!--This area contains fields where user logins, user score displays, questions
+             and answer area, correction, supporting images for correct answers and review-->
         <div class="play-game">
             <div class="user-and-score">
                 <span class="username">
-
                     <input type="text" placeholder="username" required>
-
                     <button class="login">Login</button>
-
                 </span>
                 <span class="user-score">
                     Correct Answer(s): <span id="correctAnswers">0</span>
                     Incorrect Answer(s): <span id="incorrectAnswers">0</span>
                 </span>
             </div>
+            <!--Questions will be displayed here, a drop down list to select correct answer and submit-->
             <div class="question-answer-area">
                 <p class="questions">Who where/was the <span id="tournament">0</span> Champion(s) for the year <span
                         id="year">0</span>?
@@ -55,7 +56,7 @@
                 <span id="answers"></span>
                 <button class="submit-answer">Submit Answer</button>
             </div>
-
+            <!--After each answer is submitted a correction will be mad with supporting image-->
             <div class="correction">
                 <span class="correct-answer">
                     The correct answer is:
@@ -66,20 +67,15 @@
                         alt="Image with text Football Champions">
                 </span>
                 <span class="reviews">
-
                     <label for="reviews">Like this game?</label>
                     <textarea name="reviews" id="reviews" cols="28" rows="3" placeholder="Please leave a review here..."
                         required></textarea>
                     <button class="submit-review">Submit Review</button>
-
                 </span>
             </div>
         </div>
-        <div class="feedback">
-
-        </div>
     </div>
-
+    <!--Linking our javascript file-->
     <script src="assets/js/script.js"></script>
 </body>
 
