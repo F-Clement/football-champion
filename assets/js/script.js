@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-
+    /** Setting even listeners to capture button clicks then call the corresponding functions */
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("class") === "login") {
@@ -42,7 +42,7 @@ function runGame(tournament) {
     }
 
 }
-
+/** Assign answers for each tournament so that after user submits ans answer, we can check if its correct or not */
 function searchAnswer() {
 
     let tournament = document.getElementById('tournament').innerText;
@@ -112,7 +112,7 @@ function searchAnswer() {
     }
 
 }
-
+/** Compare submitted answer and answer from searchanswer() function */
 function checkAnswer() {
     let userAnswer = document.getElementById("answer").value;
     let correctAnswer = searchAnswer();
@@ -129,6 +129,8 @@ function checkAnswer() {
         incrementIncorrectAnswer();
     }
 
+
+    /** Add supporting images to correct answers */
     switch (correctAnswer[0]) {
         case 'Brazil':
             document.getElementById("champions-image").innerHTML = `<img src="../assets/images/brazil.jpg" alt="Picture of Brazil National Team" width=\'392px\' height=\'175px\'/>`;
@@ -204,7 +206,7 @@ function checkAnswer() {
     runGame(correctAnswer[1]);
 
 }
-
+/** Increment correct and incorrect answer counts after user submits answer */
 function incrementCorrectAnswer() {
     let currentScore = parseInt(document.getElementById("correctAnswers").innerText);
     document.getElementById("correctAnswers").innerText = ++currentScore;
@@ -215,6 +217,7 @@ function incrementIncorrectAnswer() {
     document.getElementById("incorrectAnswers").innerText = ++currentScore;
 }
 
+/** Generate questions for world cup quiz */
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
@@ -227,7 +230,7 @@ function worldCupQuestions(worldCupYear, tournament) {
     <option value="Argentina">Argentina</option>
     </select>`;
 }
-
+/** Generate questions for AFCON quiz */
 function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
@@ -241,7 +244,7 @@ function afconQuestions(afconYear, tournament) {
     </select>`;
 
 }
-
+/** Generate questions for Champions league quiz */
 function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
@@ -253,7 +256,7 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
     <option value = "Bayern">Bayern</option>
     </select>`;
 }
-
+/** Generate questions for Ballon d'or quiz */
 function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
