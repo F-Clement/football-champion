@@ -116,13 +116,15 @@ function searchAnswer() {
 function checkAnswer() {
     let userAnswer = document.getElementById("answer").value;
     let correctAnswer = searchAnswer();
-    let answerIsCorrect = userAnswer === correctAnswer[0];
 
-
-    if (answerIsCorrect) {
+    if (userAnswer === correctAnswer[0]) {
         alert("Yeah!!! You got it right.");
         document.getElementById("correction").innerText = correctAnswer[0];
         incrementCorrectAnswer();
+    } else if (userAnswer === "-Select Answer-") {
+        alert("Please select an answer from the drop down list");
+        let game = button.getAttribute("data-type");
+        runGame(game);
     } else {
         alert("Oh no... that is not the correct answer.");
         document.getElementById("correction").innerText = correctAnswer[0];
@@ -222,6 +224,7 @@ function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML = `<select id="answer" name="answer">
+    <option value = "-Select Answer-">-Select Answer-</option>
     <option value="Brazil">Brazil</option>
     <option value="Italy">Italy</option>
     <option value="Spain">Spain</option>
@@ -235,6 +238,7 @@ function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "-Select Answer-">-Select Answer-</option>
     <option value = "Cameroon">Cameroon</option>
     <option value = "Tunisia">Tunisia</option>
     <option value = "Egypt">Egypt</option>
@@ -249,6 +253,7 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "-Select Answer-">-Select Answer-</option>
     <option value = "Barcelona">Barcelona</option>
     <option value = "Real Madrid">Real Madrid</option>
     <option value = "Inter Milan">Inter Milan</option>
@@ -261,6 +266,7 @@ function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
+    <option value = "-Select Answer-">-Select Answer-</option>
     <option value = "Lionel Messi">Lionel Messi</option>
     <option value = "Christiano Ronaldo">Christiano Ronaldo</option>
     <option value = "Luka Modrić">Luka Modrić</option>
