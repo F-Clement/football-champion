@@ -24,27 +24,34 @@
         <!--The different tournaments which when clicked will pose corresponding set of questions-->
         <div class="tournaments">
             <div class="world-cup">
-                <button data-type="world-cup"><img src=" assets/images/world-cup.jpg" alt="World Cup"></button>
+                <button data-type="world-cup"><img src=" assets/images/world-cup.jpg"
+                        alt="World Cup champions trophy"></button>
             </div>
             <div class="afcon">
-                <button data-type="afcon"><img src="assets/images/afcon.jpg" alt="AFCON"></button>
+                <button data-type="afcon"><img src="assets/images/afcon.jpg" alt="AFCON champions trophy"></button>
             </div>
             <div class="champions-league">
                 <button data-type="champions-league"><img src="assets/images/champions-league.jpg"
-                        alt="Champions League"></button>
+                        alt="Champions League trophy"></button>
             </div>
             <div class="ballon-d'or">
-                <button data-type="ballon-d'or"><img src="assets/images/ballon-d'Or.jpg" alt="Ballon d'Or"></button>
+                <button data-type="ballon-d'or"><img src="assets/images/ballon-d'Or.jpg"
+                        alt="Ballon d'Or trophy"></button>
             </div>
         </div>
         <!--This area contains fields where user logins, user score displays, questions
              and answer area, correction, supporting images for correct answers and review-->
-        <div class="play-game">
+        <div class=" play-game">
             <div class="user-and-score">
-                <span class="username">
-                    <input type="text" placeholder="username" required>
-                    <button class="login">Login</button>
-                </span>
+                <div class="username">
+                    <form action="" method="GET">
+                        <input id="newUser" type="text" placeholder="New User">
+                        <input id="user" type="text" placeholder="User">
+                        <br>
+                        <button class="signup">SignUp</button>
+                        <button class="login">Login</button>
+                    </form>
+                </div>
                 <span class="user-score">
                     Correct Answer(s): <span id="correctAnswers">0</span>
                     <br>
@@ -53,8 +60,8 @@
             </div>
             <!--Questions will be displayed here, a drop down list to select correct answer and submit-->
             <div class="question-answer-area">
-                <p class="questions">Who where/was the <span id="tournament">0</span> Champion(s) for the year <span
-                        id="year">0</span>?
+                <p class="questions">Who where/was the <span id="tournament">0</span> Champion(s) for the year
+                    <span id="year">0</span>?
                 </p>
                 <span id="answers"></span>
                 <button class="submit-answer">Submit Answer</button>
@@ -69,12 +76,14 @@
                     <img id="football-champions" src="assets/images/football-champions.png"
                         alt="Image with text Football Champions">
                 </span>
-                <span class="reviews">
+                <div class="reviews">
+                    <form action="" method="GET"></form>
                     <label for="reviews">Like this game?</label>
-                    <textarea name="reviews" id="reviews" cols="28" rows="3" placeholder="Please leave a review here..."
-                        required></textarea>
+                    <textarea name="reviews" id="reviews" cols="28" rows="3"
+                        placeholder="Please leave a review here..."></textarea>
                     <button class="submit-review">Submit Review</button>
-                </span>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

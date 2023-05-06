@@ -4,11 +4,31 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("class") === "login") {
-                alert("User Logged inn.");
+                let user = document.getElementById("user").value;
+                if (user === "") {
+                    alert("Please input your username before clicking login");
+                } else {
+                    alert("User Logged inn.");
+                }
+            } else if (this.getAttribute("class") === "signup") {
+                let user = document.getElementById("newUser").value;
+                if (user === "") {
+                    alert("Please enter your username");
+                } else {
+                    alert("Thank you! Select your favourite competition and test your knowledge now.");
+                }
             } else if (this.getAttribute("class") === "submit-answer") {
                 checkAnswer();
             } else if (this.getAttribute("class") === "submit-review") {
-                alert("Review submitted.");
+                let review = document.getElementById("reviews").value;
+                if (review === "") {
+                    alert("You are trying to submit an empty feedback.");
+
+
+                } else {
+                    alert("Review submitted.");
+                }
+
             } else {
                 let tournament = this.getAttribute("data-type");
                 runGame(tournament);

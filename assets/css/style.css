@@ -89,7 +89,7 @@ button::after {
 /* Style user and score section */
 .user-and-score {
     width: 100%;
-    height: 6vh;
+    height: 7vh;
     border-bottom: 2px solid black;
 }
 
@@ -135,7 +135,7 @@ button::after {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 /* Styles for correction area */
@@ -189,6 +189,7 @@ button:hover {
 }
 
 .login,
+.signup,
 .submit-answer,
 .submit-review {
     padding: 0 2px;
