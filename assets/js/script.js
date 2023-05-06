@@ -23,12 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 let review = document.getElementById("reviews").value;
                 if (review === "") {
                     alert("You are trying to submit an empty feedback.");
-
-
                 } else {
                     alert("Review submitted.");
                 }
-
             } else {
                 let tournament = this.getAttribute("data-type");
                 runGame(tournament);
@@ -143,8 +140,9 @@ function checkAnswer() {
         incrementCorrectAnswer();
     } else if (userAnswer === "-Select Answer-") {
         alert("Please select an answer from the drop down list");
-        let game = button.getAttribute("data-type");
-        runGame(game);
+        document.getElementById("correction").innerText = correctAnswer[0];
+        runGame(correctAnswer[1]);
+        incrementIncorrectAnswer();
     } else {
         alert("Oh no... that is not the correct answer.");
         document.getElementById("correction").innerText = correctAnswer[0];
