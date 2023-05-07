@@ -359,11 +359,10 @@ button:hover {
     .questions {
         text-align: center;
         line-height: 5vh;
-        margin-bottom: 5vh;
     }
 
     .submit-answer {
-        margin-top: 25px;
+        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
         padding: 5px;
