@@ -102,7 +102,7 @@ function searchAnswer() {
             2018: 'Real Madrid',
             2019: 'Liverpool',
             2020: 'Bayern',
-            2021: 'Chealsea',
+            2021: 'Chelsea',
             2022: 'Real Madrid',
         };
         return [(championsLeagueChamps[year]), "champions-league"];

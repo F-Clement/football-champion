@@ -34,7 +34,7 @@ a {
 
 .logo,
 .heading {
-    line-height: 100px;
+    line-height: 50px;
 }
 
 /* add style to our game div */
@@ -48,7 +48,7 @@ a {
 
 .tournaments {
     float: left;
-    width: 14%;
+    width: 12%;
     height: 46vh;
     border: 2px solid black;
     overflow-y: auto;
@@ -79,8 +79,9 @@ button::after {
 
 .play-game {
     float: right;
-    width: 85%;
+    width: 87%;
     height: 46vh;
+    padding: 5px;
     box-sizing: border-box;
     background-color: rgb(247, 244, 244);
 }
@@ -194,8 +195,8 @@ button:hover {
 .submit-review {
     padding: 0 2px;
     border-radius: 10%;
-    background-color: rgb(176, 233, 242);
-    color: rgb(40, 76, 85);
+    background-color: rgb(192, 205, 215);
+    color: rgb(26, 66, 76);
 }
 
 /* Adding media queries for responsiveness */
@@ -212,6 +213,7 @@ button:hover {
         float: left;
         width: 10%;
         height: 46vh;
+        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -239,6 +241,7 @@ button:hover {
         float: left;
         width: 14%;
         height: 46vh;
+        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -266,6 +269,7 @@ button:hover {
         float: left;
         width: 14%;
         height: 46vh;
+        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -310,6 +314,7 @@ button:hover {
         flex-direction: row;
         justify-content: center;
         height: 14vh;
+        padding: 2px;
         overflow-y: auto;
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
