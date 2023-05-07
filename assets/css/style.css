@@ -213,7 +213,6 @@ button:hover {
         float: left;
         width: 10%;
         height: 46vh;
-        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -223,6 +222,7 @@ button:hover {
         float: right;
         width: 89%;
         height: 46vh;
+        padding: 2px;
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -241,7 +241,6 @@ button:hover {
         float: left;
         width: 14%;
         height: 46vh;
-        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -251,6 +250,7 @@ button:hover {
         float: right;
         width: 85%;
         height: 46vh;
+        padding: 2px;
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -269,7 +269,6 @@ button:hover {
         float: left;
         width: 14%;
         height: 46vh;
-        padding: 2px;
         border: 2px solid black;
         overflow-y: auto;
         overflow-x: hidden;
@@ -279,6 +278,7 @@ button:hover {
         float: right;
         width: 85%;
         height: 46vh;
+        padding: 2px;
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -314,7 +314,6 @@ button:hover {
         flex-direction: row;
         justify-content: center;
         height: 14vh;
-        padding: 2px;
         overflow-y: auto;
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
@@ -331,6 +330,7 @@ button:hover {
         display: block;
         width: 100%;
         height: 100%;
+        padding: 2px;
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
@@ -360,6 +360,16 @@ button:hover {
         text-align: center;
         line-height: 5vh;
         margin-bottom: 5vh;
+    }
+
+    .submit-answer {
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        border-radius: 10%;
+        background-color: rgb(192, 205, 215);
+        color: rgb(26, 66, 76);
     }
 
 }
