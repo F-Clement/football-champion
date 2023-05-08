@@ -16,6 +16,7 @@ body {
 /* Styling our heading */
 
 .heading {
+    line-height: 100px;
     text-align: center;
     font-family: "Bruno Ace SC", sans-serif;
     font-size: 270%;
@@ -30,11 +31,6 @@ a {
     padding-right: 10px;
     height: 40px;
     width: 40px;
-}
-
-.logo,
-.heading {
-    line-height: 50px;
 }
 
 /* add style to our game div */
@@ -71,10 +67,6 @@ a {
     width: 392px;
     height: 175px;
     object-fit: fill;
-}
-
-button::after {
-    content: attr(data-type);
 }
 
 .play-game {
@@ -303,7 +295,6 @@ button:hover {
     .game {
         width: 100%;
         height: 100%;
-        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -313,7 +304,7 @@ button:hover {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        height: 14vh;
+        height: 16vh;
         overflow-y: auto;
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
