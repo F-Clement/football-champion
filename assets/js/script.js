@@ -110,11 +110,11 @@ function searchAnswer() {
             2010: 'Lionel Messi',
             2011: 'Lionel Messi',
             2012: 'Lionel Messi',
-            2013: 'Cristiano Ronaldo',
-            2014: 'Cristiano Ronaldo',
+            2013: 'Christiano Ronaldo',
+            2014: 'Christiano Ronaldo',
             2015: 'Lionel Messi',
-            2016: 'Cristiano Ronaldo',
-            2017: 'Cristiano Ronaldo',
+            2016: 'Christiano Ronaldo',
+            2017: 'Christiano Ronaldo',
             2018: 'Luka Modrić',
             2019: 'Lionel Messi',
             2020: 'Not Awarded',
@@ -132,10 +132,10 @@ function searchAnswer() {
 function checkAnswer() {
     let userAnswer = document.getElementById("answer").value;
     let correctAnswer = searchAnswer();
+    let correct = correctAnswer[0];
 
     if (userAnswer === correctAnswer[0]) {
-        alert("Yeah!!! You got it right.");
-        document.getElementById("correction").innerText = correctAnswer[0];
+        document.getElementById("correction").innerText = `Yeeehhh you got it right! ${correct} is the correct answer;`;
         incrementCorrectAnswer();
     } else if (userAnswer === "-Select Answer-") {
         alert("Please select an answer from the drop down list");
@@ -143,8 +143,7 @@ function checkAnswer() {
         runGame(correctAnswer[1]);
         incrementIncorrectAnswer();
     } else {
-        alert("Oh no... that is not the correct answer.");
-        document.getElementById("correction").innerText = correctAnswer[0];
+        document.getElementById("correction").innerText = `Oh no! that is not correct. ${correct} is the correct answer;`;
         incrementIncorrectAnswer();
     }
 
@@ -167,7 +166,7 @@ function checkAnswer() {
             document.getElementById("champions-image").innerHTML = `<img src="assets/images/france.jpg" alt="Picture of France national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Argentina':
-            document.getElementById("champions-image").innerHTML = `<img src="assets/images/argentina.jpg" alt = "Picture of Argentines national team" width=\'392px\' height=\'175px\'/>`;
+            document.getElementById("champions-image").innerHTML = `<img src="assets/images/argentina.jpeg" alt = "Picture of Argentina's national team" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Cameroon':
             document.getElementById("champions-image").innerHTML = `<img src="assets/images/cameroon.jpeg" alt="Picture of Cameroon national team" width=\'392px\' height=\'175px\'/>`;
@@ -208,7 +207,7 @@ function checkAnswer() {
         case 'Lionel Messi':
             document.getElementById("champions-image").innerHTML = `<img src="assets/images/lionel-messi.jpg" alt="Picture of Lionel Messi with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
-        case 'Cristiano Ronaldo':
+        case 'Christiano Ronaldo':
             document.getElementById("champions-image").innerHTML = `<img src="assets/images/christiano.jpg" alt = "Picture of Christiano Ronaldo with ballon d'or" width=\'392px\' height=\'175px\'/>`;
             break;
         case 'Karim Benzema':
@@ -219,7 +218,6 @@ function checkAnswer() {
             break;
         default:
             document.getElementById("champions-image").innerHTML = `NOT AWARDED`;
-
     }
 
     runGame(correctAnswer[1]);
