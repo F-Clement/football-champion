@@ -75,7 +75,6 @@ function searchAnswer() {
             2022: 'Argentina',
         };
 
-
         return [(worldCupChampions[year]), "world-cup"];
     } else if (tournament === "afcon") {
         let afconChampions = {
@@ -241,55 +240,53 @@ function incrementIncorrectAnswer() {
 function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("answers").innerHTML = `<select id="answer" name="answer">
-    <option value = "-Select Answer-">-Select Answer-</option>
-    <option value="Brazil">Brazil</option>
-    <option value="Italy">Italy</option>
-    <option value="Spain">Spain</option>
-    <option value="Germany">Germany</option>
-    <option value="France">France</option>
-    <option value="Argentina">Argentina</option>
-    </select>`;
+    document.getElementById("answers").innerHTML =
+        `<form>
+            <input type="radio" name="answer" id="answer" value="Brazil"><label for="answer">Brazil</label>
+            <input type="radio" name="answer" id="answer" value="Italy"><label for="answer">Italy</label>
+            <input type="radio" name="answer" id="answer" value="Spain"><label for="answer">Spain</label>
+            <input type="radio" name="answer" id="answer" value="Germany"><label for="answer">Germany</label>
+            <input type="radio" name="answer" id="answer" value="France"><label for="answer">France</label>
+            <input type="radio" name="answer" id="answer" value="Argentina"><label for="answer">Argentina</label>
+         </form>`;
 }
 /** Generate questions for AFCON quiz */
 function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
-    <option value = "-Select Answer-">-Select Answer-</option>
-    <option value = "Cameroon">Cameroon</option>
-    <option value = "Tunisia">Tunisia</option>
-    <option value = "Egypt">Egypt</option>
-    <option value = "Zambia">Zambia</option>
-    <option value = "Nigeria">Nigeria</option>
-    <option value = "Senegal">Senegal</option>
-    </select>`;
-
+    document.getElementById("answers").innerHTML =
+        `<form>
+            <input type="radio" name="answer" id="answer" value="Cameroon"><label for="answer">Cameroon</label>
+            <input type="radio" name="answer" id="answer" value="Tunisia"><label for="answer">Tunisia</label>
+            <input type="radio" name="answer" id="answer" value="Egypt"><label for="answer">Egypt</label>
+            <input type="radio" name="answer" id="answer" value="Zambia"><label for="answer">Zambia</label>
+            <input type="radio" name="answer" id="answer" value="Nigeria"><label for="answer">Nigeria</label>
+            <input type="radio" name="answer" id="answer" value="Senegal"><label for="answer">Senegal</label>
+         </form>`;
 }
 /** Generate questions for Champions league quiz */
 function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
-    <option value = "-Select Answer-">-Select Answer-</option>
-    <option value = "Barcelona">Barcelona</option>
-    <option value = "Real Madrid">Real Madrid</option>
-    <option value = "Inter Milan">Inter Milan</option>
-    <option value = "Chelsea">Chelsea</option>
-    <option value = "Bayern">Bayern</option>
-    </select>`;
+    document.getElementById("answers").innerHTML =
+        `<form>
+            <input type="radio" name="answer" id="answer" value="Barcelona"><label for="answer">Barcelona</label>
+            <input type="radio" name="answer" id="answer" value="Real Madrid"><label for="answer">Real Madrid</label>
+            <input type="radio" name="answer" id="answer" value="Inter Milan"><label for="answer">Inter Milan</label>
+            <input type="radio" name="answer" id="answer" value="Chelsea"><label for="answer">Chelsea</label>
+            <input type="radio" name="answer" id="answer" value="Bayern"><label for="answer">Bayern</label>
+         </form>`;
 }
 /** Generate questions for Ballon d'or quiz */
 function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
-    document.getElementById("answers").innerHTML = `<select id = "answer" name = "answer">
-    <option value = "-Select Answer-">-Select Answer-</option>
-    <option value = "Lionel Messi">Lionel Messi</option>
-    <option value = "Christiano Ronaldo">Christiano Ronaldo</option>
-    <option value = "Luka Modrić">Luka Modrić</option>
-    <option value = "Karim Benzema">Karim Benzema</option>
-    <option value = "Not Awarded">Not Awarded</option>
-    </select>`;
+    document.getElementById("answers").innerHTML =
+        `<form>
+            <input type="radio" name="answer" id="answer" value="Lionel Messi"><label for="answer">Lionel Messi</label>
+            <input type="radio" name="answer" id="answer" value="Christiano Ronaldo"><label for="answer">Christiano Ronaldo</label>
+            <input type="radio" name="answer" id="answer" value="Luka Modrić"><label for="answer">Luka Modrić</label>
+            <input type="radio" name="answer" id="answer" value="Karim Benzema"><label for="answer">Benzema</label>
+         </form>`;
 }
 
