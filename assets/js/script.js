@@ -130,20 +130,19 @@ function searchAnswer() {
 }
 /** Compare submitted answer and answer from searchanswer() function */
 function checkAnswer() {
-    let userAnswer = document.getElementById("answer").value;
+
+    var form = document.getElementById("answer");
+    let userAnswer = (form.elements["answer"].value);
     let correctAnswer = searchAnswer();
     let correct = correctAnswer[0];
 
     if (userAnswer === correctAnswer[0]) {
-        document.getElementById("correction").innerText = `Yeeehhh you got it right! ${correct} is the correct answer;`;
+        document.getElementById("correction").innerText = `Yeeehhh! you got it right. ${correct} is the correct answer`;
         incrementCorrectAnswer();
-    } else if (userAnswer === "-Select Answer-") {
-        alert("Please select an answer from the drop down list");
-        document.getElementById("correction").innerText = correctAnswer[0];
-        runGame(correctAnswer[1]);
-        incrementIncorrectAnswer();
+    } else if (userAnswer === "") {
+        document.getElementById("correction").innerText = "You must select at least one of the answers above.";
     } else {
-        document.getElementById("correction").innerText = `Oh no! that is not correct. ${correct} is the correct answer;`;
+        document.getElementById("correction").innerText = `Ohh noo... that is not correct. ${correct} is the correct answer`;
         incrementIncorrectAnswer();
     }
 
@@ -239,13 +238,13 @@ function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form>
-            <input type="radio" name="answer" id="answer" value="Brazil"><label for="answer">Brazil</label>
-            <input type="radio" name="answer" id="answer" value="Italy"><label for="answer">Italy</label>
-            <input type="radio" name="answer" id="answer" value="Spain"><label for="answer">Spain</label>
-            <input type="radio" name="answer" id="answer" value="Germany"><label for="answer">Germany</label>
-            <input type="radio" name="answer" id="answer" value="France"><label for="answer">France</label>
-            <input type="radio" name="answer" id="answer" value="Argentina"><label for="answer">Argentina</label>
+        `<form id="answer">
+            <input type="radio" name="answer" id="Brazil" value="Brazil" required><label for="answer">Brazil</label>
+            <input type="radio" name="answer" id="Italy" value="Italy"><label for="answer">Italy</label>
+            <input type="radio" name="answer" id="Spain" value="Spain"><label for="answer">Spain</label>
+            <input type="radio" name="answer" id="Germany" value="Germany"><label for="answer">Germany</label>
+            <input type="radio" name="answer" id="France" value="France"><label for="answer">France</label>
+            <input type="radio" name="answer" id="Argentina" value="Argentina"><label for="answer">Argentina</label>
          </form>`;
 }
 /** Generate questions for AFCON quiz */
@@ -253,13 +252,13 @@ function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form>
-            <input type="radio" name="answer" id="answer" value="Cameroon"><label for="answer">Cameroon</label>
-            <input type="radio" name="answer" id="answer" value="Tunisia"><label for="answer">Tunisia</label>
-            <input type="radio" name="answer" id="answer" value="Egypt"><label for="answer">Egypt</label>
-            <input type="radio" name="answer" id="answer" value="Zambia"><label for="answer">Zambia</label>
-            <input type="radio" name="answer" id="answer" value="Nigeria"><label for="answer">Nigeria</label>
-            <input type="radio" name="answer" id="answer" value="Senegal"><label for="answer">Senegal</label>
+        `<form id = "answer">
+            <input type="radio" name="answer" id="Cameroon" value="Cameroon" required><label for="answer">Cameroon</label>
+            <input type="radio" name="answer" id="Tunisia" value="Tunisia"><label for="answer">Tunisia</label>
+            <input type="radio" name="answer" id="Egypt" value="Egypt"><label for="answer">Egypt</label>
+            <input type="radio" name="answer" id="Zambia" value="Zambia"><label for="answer">Zambia</label>
+            <input type="radio" name="answer" id="Nigeria" value="Nigeria"><label for="answer">Nigeria</label>
+            <input type="radio" name="answer" id="Senegal" value="Senegal"><label for="answer">Senegal</label>
          </form>`;
 }
 /** Generate questions for Champions league quiz */
@@ -267,12 +266,12 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form>
-            <input type="radio" name="answer" id="answer" value="Barcelona"><label for="answer">Barcelona</label>
-            <input type="radio" name="answer" id="answer" value="Real Madrid"><label for="answer">Real Madrid</label>
-            <input type="radio" name="answer" id="answer" value="Inter Milan"><label for="answer">Inter Milan</label>
-            <input type="radio" name="answer" id="answer" value="Chelsea"><label for="answer">Chelsea</label>
-            <input type="radio" name="answer" id="answer" value="Bayern"><label for="answer">Bayern</label>
+        `<form id = "answer">
+            <input type="radio" name="answer" id="Barcelona" value="Barcelona" required><label for="answer">Barcelona</label>
+            <input type="radio" name="answer" id="Real Madrid" value="Real Madrid"><label for="answer">Real Madrid</label>
+            <input type="radio" name="answer" id="Inter Milan" value="Inter Milan"><label for="answer">Inter Milan</label>
+            <input type="radio" name="answer" id="Chelsea" value="Chelsea"><label for="answer">Chelsea</label>
+            <input type="radio" name="answer" id="Bayern" value="Bayern"><label for="answer">Bayern</label>
          </form>`;
 }
 /** Generate questions for Ballon d'or quiz */
@@ -280,11 +279,12 @@ function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form>
-            <input type="radio" name="answer" id="answer" value="Lionel Messi"><label for="answer">Lionel Messi</label>
-            <input type="radio" name="answer" id="answer" value="Christiano Ronaldo"><label for="answer">Christiano Ronaldo</label>
-            <input type="radio" name="answer" id="answer" value="Luka Modrić"><label for="answer">Luka Modrić</label>
-            <input type="radio" name="answer" id="answer" value="Karim Benzema"><label for="answer">Benzema</label>
-         </form>`;
+        `<form id="answer">
+            <input type="radio" name="answer" id="Lionel Messi" value="Lionel Messi" required><label for="answer">Lionel Messi</label>
+            <input type="radio" name="answer" id="Christiano Ronaldo" value="Christiano Ronaldo"><label for="answer">Christiano Ronaldo</label>
+            <input type="radio" name="answer" id="Luka Modrić" value="Luka Modrić"><label for="answer">Luka Modrić</label>
+            <input type="radio" name="answer" id="Karim Benzema" value="Karim Benzema"><label for="answer">Karim Benzema</label>
+            <input type="radio" name="answer" id="Not Awarded" value="Not Awarded"><label for="answer">Not Awarded</label>
+        </form>`;
 }
 

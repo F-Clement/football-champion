@@ -60,10 +60,8 @@
             <div class="user-and-score">
                 <div class="username">
                     <form action="index.html" method="GET">
-                        <input id="newUser" type="text" placeholder="New User">
-                        <input id="user" type="text" placeholder="User">
+                        <input id="user" type="text" placeholder="username">
                         <br>
-                        <button class="signup">SignUp</button>
                         <button class="login">Login</button>
                     </form>
                 </div>
@@ -85,20 +83,19 @@
                 <span id="answers"></span>
                 <button class="submit-answer">Submit Answer</button>
             </div>
-            <!--After each answer is submitted a correction will be mad with supporting image-->
+            <!--After each answer is submitted a correction will be made with supporting image-->
             <div class="correction">
                 <span class="correct-answer">
-                    <br><span id="correction"></span>
+                    <span id="correction"></span>
                 </span>
                 <span id="champions-image" class="correct-answer-image">
-                    <img id="football-champions" src="assets/images/football-champions.png"
+                    <img id="football-champions" src="assets/images/champions.jpg"
                         alt="Image with text Football Champions">
                 </span>
                 <div class="reviews">
-                    <form action="index.html" method="GET">
-                        <label for="reviews">Like this game?</label>
+                    <form>
                         <textarea name="reviews" id="reviews" cols="28" rows="3"
-                            placeholder="Please leave a review here..."></textarea>
+                            placeholder="Like this game?"></textarea>
                         <button class="submit-review">Submit Review</button>
                     </form>
                 </div>
