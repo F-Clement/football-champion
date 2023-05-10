@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     runGame("world-cup");
 });
 
+
 function runGame(tournament) {
     // Generate the years we had tournaments.
 
@@ -129,13 +130,13 @@ function checkAnswer() {
     let correct = correctAnswer[0];
 
     if (userAnswer === correctAnswer[0]) {
-        document.getElementById("correction").innerText = `Yeeehhh! It is ${correct}`;
+        document.getElementById("correction").innerText = `Yeeehhh! ${correct} Is the correct Answer`;
         incrementCorrectAnswer();
     } else if (userAnswer === "") {
-        document.getElementById("correction").innerText = "Select at least one answer.";
+        document.getElementById("correction").innerText = "Select at least one answer from the answers above.";
         incrementIncorrectAnswer();
     } else {
-        document.getElementById("correction").innerText = `Ohh No!. It is ${correct}`;
+        document.getElementById("correction").innerText = `Ohh No!. The correct answer is ${correct}`;
         incrementIncorrectAnswer();
     }
 
@@ -279,5 +280,14 @@ function ballonDorQuestions(ballonDorYear, tournament) {
             <input type="radio" name="answer" id="Karim Benzema" value="Karim Benzema"><label for="answer">Karim Benzema</label>
             <input type="radio" name="answer" id="Not Awarded" value="Not Awarded"><label for="answer">Not Awarded</label>
         </form>`;
+}
+
+function reviews() {
+    let review = document.getElementById("reviews").value;
+        if (review === "") {
+            alert("You are trying to submit an empty feedback.");
+        } else {
+            alert("Review submitted.");
+        }
 }
 

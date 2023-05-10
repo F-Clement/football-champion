@@ -23,7 +23,7 @@
         <!--Using figcaption to display names for different tournaments-->
         <div class="tournaments">
             <div class="world-cup">
-                <button data-type="world-cup">
+                <button data-type="world-cup" class="worldCupBtn gbtn" >
                     <figure>
                         <img src=" assets/images/world-cup.jpg" alt="World Cup champions trophy">
                         <figcaption>World Cup</figcaption>
@@ -31,7 +31,7 @@
                 </button>
             </div>
             <div class="afcon">
-                <button data-type="afcon">
+                <button data-type="afcon" class="afconBtn gbtn" >
                     <figure>
                         <img src="assets/images/afcon.jpg" alt="AFCON champions trophy">
                         <figcaption>AFCON</figcaption>
@@ -39,7 +39,7 @@
                 </button>
             </div>
             <div class="champions-league">
-                <button data-type="champions-league">
+                <button data-type="champions-league" class="cLeagueBtn gbtn">
                     <figure>
                         <img src="assets/images/champions-league.jpg" alt="Champions League trophy">
                         <figcaption>C-League</figcaption>
@@ -47,7 +47,7 @@
                 </button>
             </div>
             <div class="ballon-d'or">
-                <button data-type="ballon-d'or">
+                <button data-type="ballon-d'or" class="ballonDorBtn gbtn">
                     <figure><img src="assets/images/ballon-d'Or.jpg" alt="Ballon d'Or trophy">
                         <figcaption>Ballon D'or</figcaption>
                     </figure>
@@ -86,7 +86,7 @@
             <!--After each answer is submitted a correction will be made with supporting image-->
             <div class="correction">
                 <span class="correct-answer">
-                    <span id="correction">Select an answer then "Submit".</span>
+                    <span id="correction">Select an answer then click "Submit Answer" button.</span>
                 </span>
                 <span id="champions-image" class="correct-answer-image">
                     <img id="football-champions" src="assets/images/champions.jpg"
@@ -94,7 +94,7 @@
                 </span>
                 <div class="reviews">
                     <form>
-                        <textarea name="reviews" id="reviews" cols="28" rows="3"
+                        <textarea name="reviews" id="reviews" cols="35" rows="5"
                             placeholder="Like this game?"></textarea>
                         <button class="submit-review">Submit Review</button>
                     </form>
