@@ -10,13 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     alert("User Logged inn.");
                 }
-            } else if (this.getAttribute("class") === "signup") {
-                let user = document.getElementById("newUser").value;
-                if (user === "") {
-                    alert("Please enter your username");
-                } else {
-                    alert("Thank you! Select your favourite competition and test your knowledge now.");
-                }
             } else if (this.getAttribute("class") === "submit-answer") {
                 checkAnswer();
             } else if (this.getAttribute("class") === "submit-review") {
@@ -35,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     runGame("world-cup");
 });
-
 
 function runGame(tournament) {
     // Generate the years we had tournaments.
@@ -141,6 +133,7 @@ function checkAnswer() {
         incrementCorrectAnswer();
     } else if (userAnswer === "") {
         document.getElementById("correction").innerText = "Select at least one answer.";
+        incrementIncorrectAnswer();
     } else {
         document.getElementById("correction").innerText = `Ohh No!. It is ${correct}`;
         incrementIncorrectAnswer();
