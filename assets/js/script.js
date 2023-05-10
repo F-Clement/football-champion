@@ -137,12 +137,12 @@ function checkAnswer() {
     let correct = correctAnswer[0];
 
     if (userAnswer === correctAnswer[0]) {
-        document.getElementById("correction").innerText = `Yeeehhh! you got it right. ${correct} is the correct answer`;
+        document.getElementById("correction").innerText = `Yeeehhh! It is ${correct}`;
         incrementCorrectAnswer();
     } else if (userAnswer === "") {
-        document.getElementById("correction").innerText = "You must select at least one of the answers above.";
+        document.getElementById("correction").innerText = "Select at least one answer.";
     } else {
-        document.getElementById("correction").innerText = `Ohh noo... that is not correct. ${correct} is the correct answer`;
+        document.getElementById("correction").innerText = `Ohh No!. It is ${correct}`;
         incrementIncorrectAnswer();
     }
 
