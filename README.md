@@ -1,39 +1,55 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Football Champions
 
-Welcome,
+URL: https://f-clement.github.io/football-champion/
 
-This is the Code Institute student template for Codeanywhere. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using radom years.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **March 3rd, 2023**
+## Existing Features
 
-## Codeanywhere Reminders
+#### A Side Bar
+This side bar is were you will find the various tournaments you can play. It contains image buttons that represents the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or award. It is positioned vertically to the left for large screens and at horizontally at the top for smaller screens.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+#### Username and Score
+Here we intend for the user to be able to login into and account before playing to game. This feature is positioned to to right. So user inputs his or her name then click on the login button. To the right we have a score counter. Where for each correct or incorrect answer the user submits, the counter increments the score.
 
-`python3 -m http.server`
+#### Main Image
+What you immediatly see when the site loads is an image with text Football Champions. This image is intended to get the users attention on the main topic of the website. 
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+#### Question Area
+Just below the main image of the website, we have questions to test the users knowledge on different tournaments. The user has guidlines as answers are provided for the user to select one answer then click on a submit button to submit his answer.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+#### Correction
+This is where the user can improves his knowledge about Football Champions. Each time he or she submits and answer he is notified in text from if he got it right or wrong. The correct answer is also displayed and to the right a supporting image of the team or person representing the correct answer.
 
-`http_server`
+#### Review
+To be able to keep improving on this website, a box is provided where a user can tell us how they feel about the website for example what they think can be improved, what they like about the website or just anything.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Testing
+This website has been tested in a number of ways to improve human experience. 
+#### Validator Testing
+** HTML
+No errors were returned when passing through the official W3C validator
+** CSS
+No errors were found when passing through the official (Jigsaw) validator
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+#### Unfixed Bux
+Media queries have been used to improve users on different devices. But when a user using a mobile phone with automatic rotate turned on rotates his/screen, the display is a little distorted.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Deployment
 
-To log into the Heroku toolbelt CLI:
+The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+*In the GitHub repository, navigate to the Settings tab
+*In the settings page, click on pages on the left side bar.
+*when in pages, select the Master Branch from the source section drop-down menu. Selec root too and click save.
+*Refresh your page and then you will see a notification that says your website has been deployed with the live link.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+The live link for this website is: https://f-clement.github.io/football-champion/
 
----
+## Credits
 
-Happy coding!
+** All images on this website including the favicon are images downloaded from google then cropped.
+** The answers to the questions are from fox sport: https://www.foxsports.com/soccer/2022-fifa-world-cup/history
+topend sports: https://www.topendsports.com/events/soccer/africa-cup-nations/winners-list.htm  olympics: https://olympics.com/en/news/uefa-champions-league-ucl-winners-list-football-club-teams and soccer prime: https://soccerprime.com/ballon-dor-winners/
+
+
