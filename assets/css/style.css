@@ -14,7 +14,6 @@ body {
 }
 
 /* Styling our heading */
-
 .heading {
     line-height: 75px;
     text-align: center;
@@ -34,7 +33,6 @@ a {
 }
 
 /* add style to our game div */
-
 .game {
     width: 55%;
     height: 92vh;
@@ -52,7 +50,6 @@ a {
     overflow-y: auto;
     overflow-x: auto;
 }
-
 
 /* styles for images */
 .tournaments img {
@@ -75,7 +72,6 @@ a {
 
 #football-champions {
     height: 175px;
-   
 }
 
 .play-game {
@@ -101,18 +97,19 @@ a {
     padding-left: 4px;
 }
 
+input {
+    margin-left: 10px;
+}
+
 .login {
     margin-left: 2%;
-
 }
 
 .user-score {
     width: 30%;
-
 }
 
 /*Style for question and answer section*/
-
 .questions {
     text-align: center;
     font-size: 200%;
@@ -129,11 +126,6 @@ a {
     text-align: center;
 }
 
-input {
-    margin-left: 10px;
-
-}
-
 .submit-answer {
     display: block;
     height: 50px;
@@ -145,7 +137,6 @@ input {
 }
 
 /* Styles for correction area */
-
 .correction {
     padding: 2px;
     width: 100%;
@@ -156,7 +147,6 @@ input {
 #correction {
     font-size: 110%;
     font-weight: bold;
-
 }
 
 .correct-answer {
@@ -197,7 +187,6 @@ button:hover {
     border: 1px solid black;
     color: white;
     border-radius: 5%;
-
 }
 
 .login,
@@ -236,7 +225,6 @@ button:hover {
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
-
 }
 
 /* Media query for screen size of 900px maximum*/
@@ -263,7 +251,6 @@ button:hover {
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
-
 }
 
 /* Media query for screen size of maximum 700px */
@@ -290,12 +277,10 @@ button:hover {
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
-
 }
 
 /* Media query for small screens like mobile or mini tablets */
 @media screen and (max-width: 550px) {
-
     .logo {
         padding-right: 10px;
         height: 40px;
@@ -384,32 +369,32 @@ button:hover {
         background-color: rgb(192, 205, 215);
         color: rgb(26, 66, 76);
     }
+
     #champions-image {
-    width: 392px;
-    height: 25vh;
-    padding-right: 5px;
-    object-fit: fit;
-    overflow-x: auto;
-}
+        width: 392px;
+        height: 25vh;
+        padding-right: 5px;
+        object-fit: fit;
+        overflow-x: auto;
+    }
 
     #football-champions {
-    width: 392px;
-    height: 175px;
-    object-fit: fill;
-}
+        width: 392px;
+        height: 175px;
+        object-fit: fill;
+    }
 
-.correct-answer {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 4px;
-}
+    .correct-answer {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 4px;
+    }
 
-.reviews {
-    float: right;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: auto;
-}
-
+    .reviews {
+        float: right;
+        width: 100%;
+        box-sizing: border-box;
+        overflow: auto;
+    }
 }
