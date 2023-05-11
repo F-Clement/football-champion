@@ -8,7 +8,7 @@ submitAnswer.addEventListener("click", check);
 const signIn = document.getElementById("login");
 signIn.addEventListener("click", login);
 
-const submitReview = document.getElementById("reviews");
+const submitReview = document.getElementById("reviewbtn");
 submitReview.addEventListener("click", reviews);
 
 const worldCupBtn = document.getElementById("worldCupBtn");
@@ -32,7 +32,7 @@ function check(event) {
 }
 
 function login(event) {
-    let user = document.getElementById("user").value;
+    const user = document.getElementById("user").value;
         if (user === "") {
                 alert("Please input your username before clicking login");
         } else {
@@ -41,7 +41,7 @@ function login(event) {
 }
 
 function reviews(event){
-    let review = document.getElementById("reviews").value;
+    const review = document.getElementById("reviews").value;
         if (review === "") {
             alert("You are trying to submit an empty feedback.");
         } else {
@@ -95,7 +95,7 @@ function searchAnswer() {
     let year = document.getElementById('year').innerText;
 
     if (tournament === "world-cup") {
-        let worldCupChampions = {
+        const worldCupChampions = {
             2002: 'Brazil',
             2006: 'Italy',
             2010: 'Spain',
@@ -106,7 +106,7 @@ function searchAnswer() {
 
         return [(worldCupChampions[year]), "world-cup"];
     } else if (tournament === "afcon") {
-        let afconChampions = {
+        const afconChampions = {
             2000: 'Cameroon',
             2002: 'Cameroon',
             2004: 'Tunisia',
@@ -118,7 +118,7 @@ function searchAnswer() {
         };
         return [(afconChampions[year]), "afcon"];
     } else if (tournament === "champions-league") {
-        let championsLeagueChamps = {
+        const championsLeagueChamps = {
             2010: 'Inter Milan',
             2011: 'Barcelona',
             2012: 'Chelsea',
@@ -135,7 +135,7 @@ function searchAnswer() {
         };
         return [(championsLeagueChamps[year]), "champions-league"];
     } else if (tournament === "ballon-d'or") {
-        let ballonDorWinner = {
+        const ballonDorWinner = {
             2010: 'Lionel Messi',
             2011: 'Lionel Messi',
             2012: 'Lionel Messi',
@@ -160,7 +160,7 @@ function searchAnswer() {
 /** Compare submitted answer and answer from searchanswer() function */
 function checkAnswer() {
 
-    var form = document.getElementById("answer");
+    const form = document.getElementById("answer");
     let userAnswer = (form.elements["answer"].value);
     let correctAnswer = searchAnswer();
     let correct = correctAnswer[0];
@@ -254,13 +254,13 @@ function checkAnswer() {
 }
 /** Increment correct and incorrect answer counts after user submits answer */
 function incrementCorrectAnswer() {
-    let currentScore = parseInt(document.getElementById("correctAnswers").innerText);
-    document.getElementById("correctAnswers").innerText = ++currentScore;
+    let currentCorrectScore = parseInt(document.getElementById("correctAnswers").innerText);
+    document.getElementById("correctAnswers").innerText = ++currentCorrectScore;
 }
 
 function incrementIncorrectAnswer() {
-    let currentScore = parseInt(document.getElementById("incorrectAnswers").innerText);
-    document.getElementById("incorrectAnswers").innerText = ++currentScore;
+    let currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
+    document.getElementById("incorrectAnswers").innerText = ++currentIncorrectScore;
 }
 
 /** Generate questions for world cup quiz */
