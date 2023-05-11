@@ -31,6 +31,7 @@ This website has been tested in a number of ways to improve human experience.
 No errors were returned when passing through the official W3C validator
 ** CSS
 No errors were found when passing through the official (Jigsaw) validator
+** https://jshint.com/
 
 #### Unfixed Bux
 Media queries have been used to improve users on different devices. But when a user using a mobile phone with automatic rotate turned on rotates his/screen, the display is a little distorted.

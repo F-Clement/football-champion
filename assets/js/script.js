@@ -1,33 +1,69 @@
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-    /** Setting even listeners to capture button clicks then call the corresponding functions */
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("class") === "login") {
-                let user = document.getElementById("user").value;
-                if (user === "") {
-                    alert("Please input your username before clicking login");
-                } else {
-                    alert("User Logged inn.");
-                }
-            } else if (this.getAttribute("class") === "submit-answer") {
-                checkAnswer();
-            } else if (this.getAttribute("class") === "submit-review") {
-                let review = document.getElementById("reviews").value;
-                if (review === "") {
-                    alert("You are trying to submit an empty feedback.");
-                } else {
-                    alert("Review submitted.");
-                }
-            } else {
-                let tournament = this.getAttribute("data-type");
-                runGame(tournament);
-            }
-        });
-    }
-
+document.addEventListener("DOMContentLoaded", function (){
     runGame("world-cup");
 });
+
+const submitAnswer = document.getElementById("submitAnswer");
+submitAnswer.addEventListener("click", check);
+
+const signIn = document.getElementById("login");
+signIn.addEventListener("click", login);
+
+const submitReview = document.getElementById("reviews");
+submitReview.addEventListener("click", reviews);
+
+const worldCupBtn = document.getElementById("worldCupBtn");
+worldCupBtn.addEventListener("click", firstGame);
+
+const afconBtn = document.getElementById("afconBtn");
+afconBtn.addEventListener("click", secondGame);
+
+const cLeagueBtn = document.getElementById("cLeagueBtn");
+cLeagueBtn.addEventListener("click", thirdGame);
+
+const ballonDorBtn = document.getElementById("ballonDorBtn");
+ballonDorBtn.addEventListener("click", fourthGame);
+
+
+
+
+function check(event) {
+    checkAnswer();
+    
+}
+
+function login(event) {
+    let user = document.getElementById("user").value;
+        if (user === "") {
+                alert("Please input your username before clicking login");
+        } else {
+            alert("User Logged inn.");
+        }
+}
+
+function reviews(event){
+    let review = document.getElementById("reviews").value;
+        if (review === "") {
+            alert("You are trying to submit an empty feedback.");
+        } else {
+            alert("Review submitted.");
+        }
+}
+
+function firstGame(event){
+    runGame("world-cup");
+}
+
+function secondGame(event) {
+    runGame("afcon");
+}
+
+function thirdGame(event) {
+    runGame("champions-league");
+}
+
+function fourthGame(event){
+    runGame("ballon-d'or");
+}
 
 
 function runGame(tournament) {
@@ -282,12 +318,5 @@ function ballonDorQuestions(ballonDorYear, tournament) {
         </form>`;
 }
 
-function reviews() {
-    let review = document.getElementById("reviews").value;
-        if (review === "") {
-            alert("You are trying to submit an empty feedback.");
-        } else {
-            alert("Review submitted.");
-        }
-}
+
 

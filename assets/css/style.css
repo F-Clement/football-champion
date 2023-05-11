@@ -70,14 +70,12 @@ a {
 
 #champions-image {
     height: 25vh;
-    object-fit: fit;
     overflow-x: auto;
 }
 
 #football-champions {
-    width: 392px;
     height: 175px;
-    object-fit: fill;
+   
 }
 
 .play-game {
@@ -386,5 +384,31 @@ button:hover {
         background-color: rgb(192, 205, 215);
         color: rgb(26, 66, 76);
     }
+    #champions-image {
+    width: 392px;
+    height: 25vh;
+    object-fit: fit;
+    overflow-x: auto;
+}
+
+    #football-champions {
+    width: 392px;
+    height: 175px;
+    object-fit: fill;
+}
+
+.correct-answer {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+.reviews {
+    float: right;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
 
 }

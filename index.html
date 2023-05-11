@@ -23,35 +23,36 @@
         <!--Using figcaption to display names for different tournaments-->
         <div class="tournaments">
             <div class="world-cup">
-                <button data-type="world-cup" class="worldCupBtn gbtn" >
-                    <figure>
+                <figure>
+                    <button data-type="world-cup" id="worldCupBtn" >
                         <img src=" assets/images/world-cup.jpg" alt="World Cup champions trophy">
                         <figcaption>World Cup</figcaption>
-                    </figure>
-                </button>
+                    </button>
+                </figure>
             </div>
             <div class="afcon">
-                <button data-type="afcon" class="afconBtn gbtn" >
-                    <figure>
+                <figure>
+                    <button data-type="afcon" id="afconBtn" >
                         <img src="assets/images/afcon.jpg" alt="AFCON champions trophy">
                         <figcaption>AFCON</figcaption>
-                    </figure>
-                </button>
+                    </button>
+                </figure>
             </div>
             <div class="champions-league">
-                <button data-type="champions-league" class="cLeagueBtn gbtn">
-                    <figure>
+                <figure>
+                    <button data-type="champions-league" id="cLeagueBtn">
                         <img src="assets/images/champions-league.jpg" alt="Champions League trophy">
                         <figcaption>C-League</figcaption>
-                    </figure>
-                </button>
+                    </button>
+                </figure>
             </div>
             <div class="ballon-d'or">
-                <button data-type="ballon-d'or" class="ballonDorBtn gbtn">
-                    <figure><img src="assets/images/ballon-d'Or.jpg" alt="Ballon d'Or trophy">
+                <figure>
+                    <button data-type="ballon-d'or" id="ballonDorBtn">
+                        <img src="assets/images/ballon-d'Or.jpg" alt="Ballon d'Or trophy">
                         <figcaption>Ballon D'or</figcaption>
-                    </figure>
-                </button>
+                    </button>
+                </figure>
             </div>
         </div>
         <!--This area contains fields where user logins, user score displays, questions
@@ -62,7 +63,7 @@
                     <form action="index.html" method="GET">
                         <input id="user" type="text" placeholder="username">
                         <br>
-                        <button class="login">Login</button>
+                        <button id="login" class="login">Login</button>
                     </form>
                 </div>
                 <span class="user-score">
@@ -81,7 +82,7 @@
                     <span id="year">0</span>?
                 </p>
                 <span id="answers"></span>
-                <button class="submit-answer">Submit Answer</button>
+                <button id="submitAnswer" class="submit-answer">Submit Answer</button>
             </div>
             <!--After each answer is submitted a correction will be made with supporting image-->
             <div class="correction">
@@ -94,7 +95,7 @@
                 </span>
                 <div class="reviews">
                     <form>
-                        <textarea name="reviews" id="reviews" cols="35" rows="5"
+                        <textarea name="reviews" id="reviews" cols="50" rows="5"
                             placeholder="Like this game?"></textarea>
                         <button class="submit-review">Submit Review</button>
                     </form>
