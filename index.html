@@ -59,17 +59,21 @@
              and answer area, correction, supporting images for correct answers and review-->
         <div class=" play-game">
             <div class="user-and-score">
-                <div class="username">
-                    <form action="index.html" method="GET">
-                        <input id="user" type="text" placeholder="username">
-                        <br>
-                        <button id="login" class="login">Login</button>
-                    </form>
+                <div id="userinfo" class="username">
+
+                    <input id="user" type="text" maxlength="15" placeholder="username">
+                    <br>
+                    <button id="login" class="login">Submit</button>
+                    <br>
+                    Player:<span id="username"></span>
+
                 </div>
                 <span class="user-score">
                     Correct Answer(s): <span id="correctAnswers">0</span>
                     <br>
                     Incorrect Answer(s): <span id="incorrectAnswers">0</span>
+                    <br>
+                    <a href="help.html">How To Play</a>
                 </span>
             </div>
             <div class="hero-image">
@@ -94,11 +98,10 @@
                         alt="Image with text Football Champions">
                 </span>
                 <div class="reviews">
-                    <form>
-                        <textarea name="reviews" id="reviews" cols="60" rows="5"
-                            placeholder="Like this game?"></textarea>
-                        <button id="reviewbtn" class="submit-review">Submit Review</button>
-                    </form>
+
+                    <textarea name="reviews" id="reviews" cols="60" rows="5" placeholder="Like this game?"></textarea>
+                    <button id="reviewbtn" class="submit-review">Submit Review</button>
+
                 </div>
             </div>
         </div>
