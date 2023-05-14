@@ -114,21 +114,70 @@ function fourthGame(event) {
  * Runs the game for a selected tournament
  * @param {string} tournament 
  */
+
+const wcYears = [];
+const afconYears = [];
+const cLeagueYears = [];
+const ballonDorYears = [];
 function runGame(tournament) {
     // Generate the years we had tournaments.
-
     if (tournament === "World Cup") {
         let worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
-        worldCupQuestions(worldCupYear, tournament);
+
+        if (wcYears.length === 6) {
+            alert(`World Cup Questions Done. Moving To AFCON`);
+            runGame("AFCON");
+
+        } else if (wcYears.includes(worldCupYear)) {
+            runGame("World Cup");
+        } else {
+            wcYears.push(worldCupYear);
+            console.log(wcYears);
+            worldCupQuestions(worldCupYear, tournament);
+        }
+
+        //worldCupQuestions(worldCupYear, tournament);
     } else if (tournament === "AFCON") {
         let afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
-        afconQuestions(afconYear, tournament);
+
+        if (afconYears.length === 7) {
+            alert(`World Cup Questions Done. Moving To Champions League`);
+            runGame("Champions League");
+
+        } else if (afconYears.includes(afconYear)) {
+            runGame("AFCON");
+        } else {
+            afconYears.push(afconYear);
+            console.log(afconYears);
+            afconQuestions(afconYear, tournament);
+        }
+
+        //afconQuestions(afconYear, tournament);
     } else if (tournament === "Champions League") {
         let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
-        championsLeagueQuestions(champLeagueYear, tournament);
+        if (cLeagueYears.length === 13) {
+            alert(`Champions Leage Questions Done. Moving to Ballon D'or.`);
+            runGame("Ballon D'or");
+        } else if (cLeagueYears.includes(champLeagueYear)) {
+            runGame("Champions League");
+        } else {
+            cLeagueYears.push(champLeagueYear);
+            console.log(cLeagueYears);
+            championsLeagueQuestions(champLeagueYear, tournament);
+        }
+
     } else if (tournament === "Ballon D'or") {
-        let ballonDorYear = Math.floor(Math.random() * 13) + 2010;
-        ballonDorQuestions(ballonDorYear, tournament);
+        let ballonDorYear = Math.floor(Math.random() * 13) + 2012;
+        if (ballonDorYears === 13) {
+            alert('You finished the test. Your score is ');
+        } else if (ballonDorYears.includes(ballonDorYear)) {
+            runGame("Ballon D'or");
+        } else {
+            ballonDorYears.push(ballonDorYear);
+            console.log(ballonDorYears);
+            ballonDorQuestions(ballonDorYear, tournament);
+        }
+
     } else {
         alert(`Unknown Tournament: ${tournament}`);
         throw `Unknown Tournament: ${tournament}`;
@@ -186,8 +235,6 @@ function searchAnswer() {
         return [(championsLeagueChamps[year]), "Champions League"];
     } else if (tournament === "Ballon D'or") {
         const ballonDorWinner = {
-            2010: 'Lionel Messi',
-            2011: 'Lionel Messi',
             2012: 'Lionel Messi',
             2013: 'Christiano Ronaldo',
             2014: 'Christiano Ronaldo',
@@ -235,7 +282,7 @@ function checkAnswer() {
         let incorrectAnswers = parseInt(document.getElementById("incorrectAnswers").innerText);
 
         let sum = correctAnswers + incorrectAnswers;
-        if (sum < 5) {
+        if (sum < 37) {
             // Add supporting images to correct answers
             switch (correctAnswer[0]) {
                 case 'Brazil':
@@ -326,6 +373,7 @@ function checkAnswer() {
             }
         }
     }
+
 }
 
 
