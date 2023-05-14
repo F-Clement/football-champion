@@ -363,14 +363,23 @@ function checkAnswer() {
             let fail = parseInt(document.getElementById("incorrectAnswers").innerText);
             score = document.getElementById("correction");
 
+            finalScore = parseInt((pass * 100)/35)
+
             let sum = pass + fail;
             if (pass > fail) {
-                alert(`Super! Your Score is ${pass} / ${sum} `);
+                document.getElementById("questions").innerHTML = `<br> <h2>You Scored: ${finalScore}%</h2>
+                <br>
+                <h3><a href="index.html"> Play Again </a>`;
+                document.getElementById("correctionArea").innerHTML="";
 
             } else {
-                alert(`Your Score is ${pass} / ${sum}`);
+                document.getElementById("questions").innerHTML = `<br> <h2>You Scored: ${finalScore}%</h2>
+                <br>
+                <h3><a href="index.html"> Play Again </a>`;
+                document.getElementById("correctionArea").innerHTML="";
+                
             }
-            window.location.reload();
+        
         }
     }
 
