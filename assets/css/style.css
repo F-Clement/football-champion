@@ -192,6 +192,25 @@ button:hover {
     color: rgb(26, 66, 76);
 }
 
+/* Styles for our help page */
+
+.help {
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(192, 205, 215);
+
+}
+
+.playNow{
+    text-align: right;
+    margin-right: 10px;
+    
+}
+.howtoplay{
+    text-align: center;
+}
+
 /* Adding media queries for responsiveness */
 
 /* Media query for max screen size of 1200px */

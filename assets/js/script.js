@@ -39,6 +39,7 @@ function login(event) {
     } else {
         alert("Welcome to Football Champions");
         document.getElementById("username").innerHTML = `${user}`;
+        document.getElementById("user").value = "";
     }
 }
 /**
@@ -282,7 +283,7 @@ function checkAnswer() {
         let incorrectAnswers = parseInt(document.getElementById("incorrectAnswers").innerText);
 
         let sum = correctAnswers + incorrectAnswers;
-        if (sum < 37) {
+        if (sum < 35) {
             // Add supporting images to correct answers
             switch (correctAnswer[0]) {
                 case 'Brazil':
@@ -365,12 +366,11 @@ function checkAnswer() {
             let sum = pass + fail;
             if (pass > fail) {
                 alert(`Super! Your Score is ${pass} / ${sum} `);
-                window.location.reload();
 
             } else {
                 alert(`Your Score is ${pass} / ${sum}`);
-                window.location.reload();
             }
+            window.location.reload();
         }
     }
 
@@ -444,6 +444,7 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
             <input type="radio" name="answer" id="Real Madrid" value="Real Madrid"><label for="answer">Real Madrid</label>
             <input type="radio" name="answer" id="Inter Milan" value="Inter Milan"><label for="answer">Inter Milan</label>
             <input type="radio" name="answer" id="Chelsea" value="Chelsea"><label for="answer">Chelsea</label>
+            <input type="radio" name="answer" id="Liverpool" value="Liverpool"><Label for="answer">Liverpool</Label>
             <input type="radio" name="answer" id="Bayern" value="Bayern"><label for="answer">Bayern</label>
          </form>`;
 }
