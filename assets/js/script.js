@@ -2,16 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const signIn = document.getElementById("login");
     signIn.addEventListener("click", login);
 
-
-
-    runGame("World Cup");
 });
 
-const submitAnswer = document.getElementById("submitAnswer");
-submitAnswer.addEventListener("click", checkAnswer);
-
-const submitReview = document.getElementById("reviewbtn");
-submitReview.addEventListener("click", reviews);
 
 const worldCupBtn = document.getElementById("worldCupBtn");
 worldCupBtn.addEventListener("click", firstGame);
@@ -25,12 +17,18 @@ cLeagueBtn.addEventListener("click", thirdGame);
 const ballonDorBtn = document.getElementById("ballonDorBtn");
 ballonDorBtn.addEventListener("click", fourthGame);
 
+const submitAnswer = document.getElementById("submitAnswer");
+submitAnswer.addEventListener("click", checkAnswer);
+
+const submitReview = document.getElementById("reviewbtn");
+submitReview.addEventListener("click", reviews);
+
 
 
 
 /**
  * Requires a user enters atleast some text as username before login in.
- * @param {sring} event 
+ * @param {string} event 
  */
 function login(event) {
     const user = document.getElementById("user").value;
@@ -40,8 +38,125 @@ function login(event) {
         alert("Welcome to Football Champions");
         document.getElementById("username").innerHTML = `${user}`;
         document.getElementById("user").value = "";
+        firstGame();
     }
 }
+
+/**
+ * This function will call function runGame and pass it a string parameter "World cup"
+ * @param {string} event 
+ */
+const wcYears = [];
+function firstGame(WorldCup) {
+    const userinfo = document.getElementById("username").textContent;
+    if (userinfo === "") {
+        alert("You must submit a user name to play");
+    } else {
+        //runGame("World Cup");
+        let tournament = "WorldCup";
+        let worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
+
+        if (wcYears.length === 6) {
+            alert(`World Cup Questions Done. Moving To AFCON`);
+            secondGame();
+
+        } else if (wcYears.includes(worldCupYear)) {
+            firstGame();
+        } else {
+            wcYears.push(worldCupYear);
+            console.log(wcYears);
+            worldCupQuestions(worldCupYear, tournament);
+        }
+
+        //worldCupQuestions(worldCupYear, tournament);
+    }
+}
+
+/**
+ * This function will call function runGame and pass it a string parameter "AFCOn"
+ * @param {string} event 
+ */
+
+const afconYears = [];
+function secondGame(AFCON) {
+    const userinfo = document.getElementById("username").textContent;
+    if (userinfo === "") {
+        alert("You must submit a user name to play");
+    } else {
+       // runGame("AFCON");
+       let tournament = "AFCON"; 
+        let afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
+
+        if (afconYears.length === 7) {
+            alert(`World Cup Questions Done. Moving To Champions League`);
+            thirdGame();
+
+        } else if (afconYears.includes(afconYear)) {
+            secondGame();
+        } else {
+            afconYears.push(afconYear);
+            console.log(afconYears);
+            afconQuestions(afconYear, tournament);
+        }
+
+        //afconQuestions(afconYear, tournament);
+    
+    }
+}
+/**
+ * This function will call function runGame and pass it a string parameter "Champions League"
+ * @param {string} event 
+ */
+const cLeagueYears = [];
+function thirdGame(ChampionsLeague) {
+    const userinfo = document.getElementById("username").textContent;
+    if (userinfo === "") {
+        alert("You must submit a user name to play");
+    } else {
+       // runGame("Champions League");
+       let tournament = "ChampionsLeague";
+        let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
+        if (cLeagueYears.length === 13) {
+            alert(`Champions Leage Questions Done. Moving to Ballon D'or.`);
+            fourthGame();
+        } else if (cLeagueYears.includes(champLeagueYear)) {
+            thirdGame();
+        } else {
+            cLeagueYears.push(champLeagueYear);
+            console.log(cLeagueYears);
+            championsLeagueQuestions(champLeagueYear, tournament);
+        }
+
+    
+    }
+}
+/**
+ * This function will call function runGame and pass it a string paramenter "Ballon D'or"
+ * @param {string} event 
+ */
+const ballonDorYears = [];
+function fourthGame(event) {
+    const userinfo = document.getElementById("username").textContent;
+    if (userinfo === "") {
+        alert("You must submit a user name to play");
+    } else {
+        //runGame("Ballon D'or");
+        let tournament = "BallonDor";
+        let ballonDorYear = Math.floor(Math.random() * 13) + 2012;
+        if (ballonDorYears === 13) {
+            alert('You finished the test. Your score is ');
+        } else if (ballonDorYears.includes(ballonDorYear)) {
+            fourthGame();
+        } else {
+            ballonDorYears.push(ballonDorYear);
+            console.log(ballonDorYears);
+            ballonDorQuestions(ballonDorYear, tournament);
+        }
+
+    
+    }
+}
+
 /**
  * Verifies a user is not submitting and empty text for review before confirming review submitted.
  * @param {string} event 
@@ -57,134 +172,12 @@ function reviews(event) {
         } else {
             alert("Review submitted.");
         }
-        runGame("World Cup");
+        firstGame(WorldCup);
     }
 
 }
-/**
- * This function will call function runGame and pass it a string parameter "World cup"
- * @param {string} event 
- */
-function firstGame(event) {
-    const userinfo = document.getElementById("username").textContent;
-    if (userinfo === "") {
-        alert("You must submit a user name to play");
-    } else {
-        runGame("World Cup");
-    }
 
-}
-/**
- * This function will call function runGame and pass it a string parameter "AFCOn"
- * @param {string} event 
- */
-function secondGame(event) {
-    const userinfo = document.getElementById("username").textContent;
-    if (userinfo === "") {
-        alert("You must submit a user name to play");
-    } else {
-        runGame("AFCON");
-    }
-}
-/**
- * This function will call function runGame and pass it a string parameter "Champions League"
- * @param {string} event 
- */
-function thirdGame(event) {
-    const userinfo = document.getElementById("username").textContent;
-    if (userinfo === "") {
-        alert("You must submit a user name to play");
-    } else {
-        runGame("Champions League");
-    }
-}
-/**
- * This function will call function runGame and pass it a string paramenter "Ballon D'or"
- * @param {string} event 
- */
-function fourthGame(event) {
-    const userinfo = document.getElementById("username").textContent;
-    if (userinfo === "") {
-        alert("You must submit a user name to play");
-    } else {
-        runGame("Ballon D'or");
-    }
-}
 
-/**
- * Runs the game for a selected tournament
- * @param {string} tournament 
- */
-
-const wcYears = [];
-const afconYears = [];
-const cLeagueYears = [];
-const ballonDorYears = [];
-function runGame(tournament) {
-    // Generate the years we had tournaments.
-    if (tournament === "World Cup") {
-        let worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
-
-        if (wcYears.length === 6) {
-            alert(`World Cup Questions Done. Moving To AFCON`);
-            runGame("AFCON");
-
-        } else if (wcYears.includes(worldCupYear)) {
-            runGame("World Cup");
-        } else {
-            wcYears.push(worldCupYear);
-            console.log(wcYears);
-            worldCupQuestions(worldCupYear, tournament);
-        }
-
-        //worldCupQuestions(worldCupYear, tournament);
-    } else if (tournament === "AFCON") {
-        let afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
-
-        if (afconYears.length === 7) {
-            alert(`World Cup Questions Done. Moving To Champions League`);
-            runGame("Champions League");
-
-        } else if (afconYears.includes(afconYear)) {
-            runGame("AFCON");
-        } else {
-            afconYears.push(afconYear);
-            console.log(afconYears);
-            afconQuestions(afconYear, tournament);
-        }
-
-        //afconQuestions(afconYear, tournament);
-    } else if (tournament === "Champions League") {
-        let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
-        if (cLeagueYears.length === 13) {
-            alert(`Champions Leage Questions Done. Moving to Ballon D'or.`);
-            runGame("Ballon D'or");
-        } else if (cLeagueYears.includes(champLeagueYear)) {
-            runGame("Champions League");
-        } else {
-            cLeagueYears.push(champLeagueYear);
-            console.log(cLeagueYears);
-            championsLeagueQuestions(champLeagueYear, tournament);
-        }
-
-    } else if (tournament === "Ballon D'or") {
-        let ballonDorYear = Math.floor(Math.random() * 13) + 2012;
-        if (ballonDorYears === 13) {
-            alert('You finished the test. Your score is ');
-        } else if (ballonDorYears.includes(ballonDorYear)) {
-            runGame("Ballon D'or");
-        } else {
-            ballonDorYears.push(ballonDorYear);
-            console.log(ballonDorYears);
-            ballonDorQuestions(ballonDorYear, tournament);
-        }
-
-    } else {
-        alert(`Unknown Tournament: ${tournament}`);
-        throw `Unknown Tournament: ${tournament}`;
-    }
-
-}
 /**
  * Assign answers for each tournament so that after user submits ans answer, we can check if its correct or not
  * @returns champions for a random year and the tournament
@@ -194,7 +187,7 @@ function searchAnswer() {
     let tournament = document.getElementById('tournament').innerText;
     let year = document.getElementById('year').innerText;
 
-    if (tournament === "World Cup") {
+    if (tournament === "WorldCup") {
         const worldCupChampions = {
             2002: 'Brazil',
             2006: 'Italy',
@@ -204,7 +197,7 @@ function searchAnswer() {
             2022: 'Argentina',
         };
 
-        return [(worldCupChampions[year]), "World Cup"];
+        return [(worldCupChampions[year]), "WorldCup"];
     } else if (tournament === "AFCON") {
         const afconChampions = {
             2000: 'Cameroon',
@@ -217,7 +210,7 @@ function searchAnswer() {
 
         };
         return [(afconChampions[year]), "AFCON"];
-    } else if (tournament === "Champions League") {
+    } else if (tournament === "ChampionsLeague") {
         const championsLeagueChamps = {
             2010: 'Inter Milan',
             2011: 'Barcelona',
@@ -233,8 +226,8 @@ function searchAnswer() {
             2021: 'Chelsea',
             2022: 'Real Madrid',
         };
-        return [(championsLeagueChamps[year]), "Champions League"];
-    } else if (tournament === "Ballon D'or") {
+        return [(championsLeagueChamps[year]), "ChampionsLeague"];
+    } else if (tournament === "BallonDor") {
         const ballonDorWinner = {
             2012: 'Lionel Messi',
             2013: 'Christiano Ronaldo',
@@ -248,7 +241,7 @@ function searchAnswer() {
             2021: 'Lionel Messi',
             2022: 'Karim Benzema',
         };
-        return [(ballonDorWinner[year]), "Ballon D'or"];
+        return [(ballonDorWinner[year]), "BallonDor"];
     } else {
         alert(`Tournament Uknown`);
         throw (`Unknown tournament! Aborting....`);
@@ -356,7 +349,16 @@ function checkAnswer() {
                     document.getElementById("champions-image").innerHTML = `NOT AWARDED`;
             }
 
-            runGame(correctAnswer[1]);
+            //runGame(correctAnswer[1]);
+            if (correctAnswer[1] === "WorldCup"){
+                firstGame();
+            }else if(correctAnswer[1] === "AFCON"){
+                secondGame();
+            }else if(correctAnswer[1] === "ChampionsLeague"){
+                thirdGame();
+            }else{
+                fourthGame();
+            }
 
         } else {
             let pass = parseInt(document.getElementById("correctAnswers").innerText);
@@ -367,13 +369,13 @@ function checkAnswer() {
 
             let sum = pass + fail;
             if (pass > fail) {
-                document.getElementById("questions").innerHTML = `<br> <h2>You Scored: ${finalScore}%</h2>
+                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct and ${fail} incorrect answer(s). Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
                 document.getElementById("correctionArea").innerHTML="";
 
             } else {
-                document.getElementById("questions").innerHTML = `<br> <h2>You Scored: ${finalScore}%</h2>
+                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer correct(s) and ${fail} incorrect answer(s). Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
                 document.getElementById("correctionArea").innerHTML="";
