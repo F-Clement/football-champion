@@ -43,6 +43,9 @@ a {
     overflow-y: auto;
     overflow-x: auto;
 }
+figcaption{
+    text-align:center;
+}
 /* styles for images */
 .tournaments img {
     padding: 5px;
@@ -327,9 +330,7 @@ button:hover {
     }
     #champions-image {
         width: 392px;
-        height: 25vh;
         padding-right: 5px;
-        object-fit: fit;
         overflow-x: auto;
     }
     #football-champions {
@@ -343,6 +344,7 @@ button:hover {
         box-sizing: border-box;
         margin: 4px;
     }
+
     .reviews {
         float: right;
         width: 100%;

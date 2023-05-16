@@ -142,7 +142,7 @@ function reviews() {
         } else {
             alert("Review submitted.");
         }
-        firstGame(WorldCup);
+        firstGame();
     }
 }
 /**
@@ -330,7 +330,7 @@ function checkAnswer() {
             const pass = parseInt(document.getElementById("correctAnswers").innerText);
             const fail = parseInt(document.getElementById("incorrectAnswers").innerText);
             const unanswered = 35 - (pass + fail);
-            finalScore = parseInt((pass * 100)/35)
+            const finalScore = parseInt((pass * 100)/35)
             if (pass > fail) {
                 document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct, ${fail} incorrect answer(s)
                 and ${unanswered} unanswered questions.

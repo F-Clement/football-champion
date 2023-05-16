@@ -3,38 +3,142 @@
 URL: https://f-clement.github.io/football-champion/
 
 Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using radom years.
+![Football Champions Responsiveness](assets/images/football_champions_responsiveness.png)
 
 ## Existing Features
 
 #### A Side Bar
 This side bar is were you will find the various tournaments you can play. It contains image buttons that represents the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or award. It is positioned vertically to the left for large screens and at horizontally at the top for smaller screens.
+![Side Bar](assets/images/side-bar.png)
 
 #### Username and Score
 Here we intend for the user to be able to login into and account before playing to game. This feature is positioned to to right. So user inputs his or her name then click on the login button. To the right we have a score counter. Where for each correct or incorrect answer the user submits, the counter increments the score.
+![Username and Score](assets/images/user-score-area.png)
 
 #### Main Image
 What you immediatly see when the site loads is an image with text Football Champions. This image is intended to get the users attention on the main topic of the website. 
+![Main Image](assets/images/main-image.png)
 
 #### Question Area
 Just below the main image of the website, we have questions to test the users knowledge on different tournaments. The user has guidlines as answers are provided for the user to select one answer then click on a submit button to submit his answer.
+![Question Answer Area](assets/images/questions-answer-area.png)
 
 #### Correction
 This is where the user can improves his knowledge about Football Champions. Each time he or she submits and answer he is notified in text from if he got it right or wrong. The correct answer is also displayed and to the right a supporting image of the team or person representing the correct answer.
+![Correction with supporting images](assets/images/correction-area.png)
 
 #### Review
 To be able to keep improving on this website, a box is provided where a user can tell us how they feel about the website for example what they think can be improved, what they like about the website or just anything.
 
+#### Help Page
+This page guides the user on what is expected from him or her in order to get the best user experience. It is 
+a set of simple instructions to follow.
+![Help Page](assets/images/help-page.png)
+
 ## Testing
-This website has been tested in a number of ways to improve human experience. 
+This website has been tested in a number of ways to improve user experience. 
 #### Validator Testing
 ** HTML
 No errors were returned when passing through the official W3C validator
 ** CSS
 No errors were found when passing through the official (Jigsaw) validator
 ** https://jshint.com/
+No errors. A couple of version control warnings.
 
-#### Unfixed Bux
-Media queries have been used to improve users on different devices. But when a user using a mobile phone with automatic rotate turned on rotates his/screen, the display is a little distorted.
+<table>
+    <tr>
+        <th>Action</th>
+        <th>Expected Results</th>
+        <th>Actual Results</th>
+    </tr>
+    <tr>
+        <td>Enter live link for football champions in the browser</td>
+        <td>Page loads without any question and expects user to submit a name</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on submit button without inputing user name</td>
+        <td>Browser alerts you to input user name</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Input text as username then click submit</td>
+        <td>Browser alerts a welcome to football champions message and first question on World Cup loads</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on World Cup button without inputing a user name</td>
+        <td>Browser alerts you to submit a username</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the AFCON button without inputing a user name</td>
+        <td>Browser alerts you to submit a username</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the CLeague button without inputing a user name</td>
+        <td>Browser alerts you to submit a username</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the Ballon D'or button without inputing a user name</td>
+        <td>Browser alerts you to submit a username</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the World Cup button after submiting a user name</td>
+        <td>Questions about the World Cup display</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the AFCON button after submiting a user name</td>
+        <td>Questions about the AFCON display</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the CLeague(Champions League) button after submiting a user name</td>
+        <td>Questions about the CLeague display</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the Ballon D'or button after submiting a user name</td>
+        <td>Questions about the Ballon D'or display</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the Submit Answer button without selecting an answer</td>
+        <td>Text is displayed below that you should select at least one answer but incorrect answer are incremented</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on the Submit Answer button after selecting and answer</td>
+        <td>Code checks if answer is correct or incorrect then increments correct answers if correct and incorrect answers otherwise</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click to submit review without username</td>
+        <td>Browser alerts user to submit a user name first</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click to submit empty review after submiting username</td>
+        <td>Browser alerts user that he or she is trying to submit an empty review </td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click to submit review(some text) after submiting username</td>
+        <td>Browser alerts user that review has been submitted </td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Submit ans answer</td>
+        <td>User is told the correct answer with a corresponding image to support the answer.</td>
+        <td>Pass</td>
+    </tr>
+    
+</table>
+
 
 ## Deployment
 
