@@ -3,10 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
     submitUserName.addEventListener("click", submit);
 
 });
+// Here we declare arrays to keep count of the random generated years to avoid repeats.
 const wcYears = [];
 const afconYears = [];
 const cLeagueYears = [];
 const ballonDorYears = [];
+
+// Event listeners for our tournaments and submit buttons
 
 const worldCupBtn = document.getElementById("worldCupBtn");
 worldCupBtn.addEventListener("click", firstGame);
@@ -28,9 +31,8 @@ submitReview.addEventListener("click", reviews);
 
 /**
  * Requires a user enters atleast some text as username before login in.
- * @param {string} event 
  */
-function submit(event) {
+function submit() {
     const user = document.getElementById("user").value;
     if (user === "") {
         alert("Please input your username before clicking login");
@@ -42,16 +44,15 @@ function submit(event) {
     }
 }
 /**
- * This function will call function runGame and pass it a string parameter "World cup"
- * @param {string} event 
+ * This function will call function will generate random years without repeating for our World Cup questions
  */
-function firstGame(WorldCup) {
+function firstGame() {
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
     } else {
-        let tournament = "WorldCup";
-        let worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
+        const tournament = "WorldCup";
+        const worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
         if (wcYears.length === 6) {
             alert(`World Cup Questions Done. Moving To AFCON`);
             secondGame();
@@ -64,16 +65,16 @@ function firstGame(WorldCup) {
     }
 }
 /**
- * This function will call function runGame and pass it a string parameter "AFCOn"
- * @param {string} event 
+ * This function will call function will generate random years without repeating for our AFCON questions
  */
-function secondGame(AFCON) {
+function secondGame() {
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
     } else {
-       let tournament = "AFCON"; 
-        let afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
+
+        const tournament = "AFCON"; 
+        const afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
         if (afconYears.length === 7) {
             alert(`World Cup Questions Done. Moving To Champions League`);
             thirdGame();
@@ -86,16 +87,15 @@ function secondGame(AFCON) {
     }
 }
 /**
- * This function will call function runGame and pass it a string parameter "Champions League"
- * @param {string} event 
+ * This function will call function will generate random years without repeating for our Champions Leage questions.
  */
-function thirdGame(ChampionsLeague) {
+function thirdGame() {
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
     } else {
-       let tournament = "ChampionsLeague";
-        let champLeagueYear = Math.floor(Math.random() * 13) + 2010;
+        const tournament = "ChampionsLeague";
+        const champLeagueYear = Math.floor(Math.random() * 13) + 2010;
         if (cLeagueYears.length === 13) {
             alert(`Champions Leage Questions Done. Moving to Ballon D'or.`);
             fourthGame();
@@ -108,18 +108,18 @@ function thirdGame(ChampionsLeague) {
     }
 }
 /**
- * This function will call function runGame and pass it a string paramenter "Ballon D'or"
- * @param {string} event 
+ * This function will call function generate random years without repeating for our Ballon D'or questions 
  */
-function fourthGame(event) {
+function fourthGame() {
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
     } else {
-        let tournament = "BallonDor";
-        let ballonDorYear = Math.floor(Math.random() * 11) + 2012;
+        const tournament = "BallonDor";
+        const ballonDorYear = Math.floor(Math.random() * 11) + 2012;
         if (ballonDorYears.length === 11) {
-            alert("You are done with Ballon D'or questions");
+            alert("You are done with Ballon D'or questions. Checking... for questions not attended to.");
+            firstGame();
         } else if (ballonDorYears.includes(ballonDorYear)) {
             fourthGame();
         } else {
@@ -129,10 +129,9 @@ function fourthGame(event) {
     }
 }
 /**
- * Verifies a user is not submitting and empty text for review before confirming review submitted.
- * @param {string} event 
+ * Verifies a user is not submitting and empty text for review before confirming review submitted
  */
-function reviews(event) {
+function reviews() {
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -152,8 +151,8 @@ function reviews(event) {
  */
 function searchAnswer() {
 
-    let tournament = document.getElementById('tournament').innerText;
-    let year = document.getElementById('year').innerText;
+    const tournament = document.getElementById('tournament').innerText;
+    const year = document.getElementById('year').innerText;
 
     if (tournament === "WorldCup") {
         const worldCupChampions = {
@@ -217,7 +216,8 @@ function searchAnswer() {
 
 }
 /**
- * Compare submitted answer and answer from searchanswer() function
+ * Compare submitted answer and answer from searchanswer() function then calls a function to increment
+ * correct or incorrect answers. Also keep counts of number of questions to give a final score at the end.
  */
 function checkAnswer() {
     const userinfo = document.getElementById("username").textContent;
@@ -225,9 +225,9 @@ function checkAnswer() {
         alert("You must submit a user name to play");
     } else {
         const form = document.getElementById("answer");
-        let userAnswer = (form.elements["answer"].value);
-        let correctAnswer = searchAnswer();
-        let correct = correctAnswer[0];
+        const userAnswer = (form.elements["answer"].value);
+        const correctAnswer = searchAnswer();
+        const correct = correctAnswer[0];
 
         if (userAnswer === correctAnswer[0]) {
             document.getElementById("correction").innerText = `Yeeehhh! ${correct} Is the correct Answer`;
@@ -240,10 +240,10 @@ function checkAnswer() {
             incrementIncorrectAnswer();
         }
 
-        let correctAnswers = parseInt(document.getElementById("correctAnswers").innerText);
-        let incorrectAnswers = parseInt(document.getElementById("incorrectAnswers").innerText);
-        let total = correctAnswers + incorrectAnswers;
-        let sum = wcYears.length + afconYears.length + cLeagueYears.length + ballonDorYears.length;
+        const correctAnswers = parseInt(document.getElementById("correctAnswers").innerText);
+        const incorrectAnswers = parseInt(document.getElementById("incorrectAnswers").innerText);
+        const total = correctAnswers + incorrectAnswers;
+        const sum = wcYears.length + afconYears.length + cLeagueYears.length + ballonDorYears.length;
         if (sum < 35 && total < 35) {
             // Add supporting images to correct answers
             switch (correctAnswer[0]) {
@@ -327,21 +327,26 @@ function checkAnswer() {
             }
 
         } else {
-            let pass = parseInt(document.getElementById("correctAnswers").innerText);
-            let fail = parseInt(document.getElementById("incorrectAnswers").innerText);
-            score = document.getElementById("correction");
-
+            const pass = parseInt(document.getElementById("correctAnswers").innerText);
+            const fail = parseInt(document.getElementById("incorrectAnswers").innerText);
+            const unanswered = 35 - (pass + fail);
             finalScore = parseInt((pass * 100)/35)
-        
-            let sum = pass + fail;
             if (pass > fail) {
-                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct and ${fail} incorrect answer(s). Final Score: ${finalScore}%</h2>
+                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct, ${fail} incorrect answer(s)
+                and ${unanswered} unanswered questions.
+                <br>
+                <br>
+                 Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
                 document.getElementById("correctionArea").innerHTML="";
 
             } else {
-                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct and ${fail} incorrect answer(s). Final Score: ${finalScore}%</h2>
+                document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct, ${fail} incorrect answer(s)
+                and ${unanswered} unanswered questions.
+                <br>
+                <br>
+                 Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
                 document.getElementById("correctionArea").innerHTML="";    
@@ -360,11 +365,11 @@ function incrementCorrectAnswer() {
  * Increment correct answer count after user submits answer
  */
 function incrementIncorrectAnswer() {
-    let currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
+    let  currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
     document.getElementById("incorrectAnswers").innerText = ++currentIncorrectScore;
 }
 /**
- * Generate questions for world cup game
+ * Generate questions for world cup game using some randomly generated years.
  * @param {string} worldCupYear 
  * @param {string} tournament 
  */
@@ -382,7 +387,7 @@ function worldCupQuestions(worldCupYear, tournament) {
          </form>`;
 }
 /**
- * Generate questions for AFCON game
+ * Generate questions for AFCON game using some randomly generated years
  * @param {string} afconYear 
  * @param {string} tournament 
  */
@@ -418,7 +423,7 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
          </form>`;
 }
 /**
- * Generate questions for Ballon d'or game
+ * Generate questions for Ballon d'or game using some randomly generated years
  * @param {string} ballonDorYear 
  * @param {string} tournament 
  */
@@ -434,3 +439,4 @@ function ballonDorQuestions(ballonDorYear, tournament) {
             <input type="radio" name="answer" id="Not Awarded" value="Not Awarded"><label for="answer">Not Awarded</label>
         </form>`;
 }
+
