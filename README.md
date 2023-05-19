@@ -3,12 +3,22 @@
 URL: https://f-clement.github.io/football-champion/
 
 Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using radom years.
-![Football Champions Responsiveness](assets/images/football_champions_responsiveness.png)
+![Football Champions](assets/images/footballchampions.png)
+## Design
+
+Wuse [Figma](figma.com) to design two different display of this website. We have a desktop display which is thesame when you use a tablet, and a mobile phone display.
+
+- Destop display
+![Desktop design](assets/images/desktop-design.png)
+
+- Phone display
+![Phone design](assets/images/phone-design.png)
 
 ## Existing Features
 
 #### A Side Bar
 This side bar is were you will find the various tournaments you can play. It contains image buttons that represents the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or award. It is positioned vertically to the left for large screens and at horizontally at the top for smaller screens.
+
 ![Side Bar](assets/images/side-bar.png)
 
 #### Username and Score
@@ -36,14 +46,17 @@ a set of simple instructions to follow.
 ![Help Page](assets/images/help-page.png)
 
 ## Testing
-This website has been tested in a number of ways to improve user experience. 
+This website has been tested firstly on different screen sizes to improve user experience. On tablets, laptops and other bigger screens we have a side bar with the different tournaments serving as sets of questions. But on smaller screen sizes like phones there is no side bar. We have these tournaments on the top as a menu.
 #### Validator Testing
-** HTML
-No errors were returned when passing through the official W3C validator
-** CSS
-No errors were found when passing through the official (Jigsaw) validator
-** https://jshint.com/
-No errors. A couple of version control warnings.
+- HTML
+No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ff-clement.github.io%2Ffootball-champion%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+- CSS
+No errors were found when passing through the official [(Jigsaw) validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ff-clement.github.io%2Ffootball-champion%2F)
+
+- [jshint](https://jshint.com/) :No errors. A couple of version control warnings.
+
+  - In the table below you can see other test done manually.
 
 <table>
     <tr>
@@ -135,26 +148,40 @@ No errors. A couple of version control warnings.
         <td>Submit ans answer</td>
         <td>User is told the correct answer with a corresponding image to support the answer.</td>
         <td>Pass</td>
-    </tr>
-    
+    </tr> 
 </table>
+#### Testing Responsivenes
 
+- Below is an image showing the display of the website on various screen sizes.
+
+![Football Champions Responsiveness](assets/images/football_champions_responsiveness.png)
 
 ## Deployment
 
 The site was deployed to GitHub pages. The steps to deploy are as follows:
+- In the GitHub repository, navigate to the Settings tab
+- In the settings page, click on pages on the left side bar.
+- when in pages, select the Master Branch from the source section drop-down menu. Selec root too and click save.
+- Refresh your page and then you will see a notification that says your website has been deployed with the live link.
 
-*In the GitHub repository, navigate to the Settings tab
-*In the settings page, click on pages on the left side bar.
-*when in pages, select the Master Branch from the source section drop-down menu. Selec root too and click save.
-*Refresh your page and then you will see a notification that says your website has been deployed with the live link.
-
-The live link for this website is: https://f-clement.github.io/football-champion/
+  - The live link for this website is: https://f-clement.github.io/football-champion/
 
 ## Credits
 
-** All images on this website including the favicon are images downloaded from google then cropped.
-** The answers to the questions are from fox sport: https://www.foxsports.com/soccer/2022-fifa-world-cup/history
-topend sports: https://www.topendsports.com/events/soccer/africa-cup-nations/winners-list.htm  olympics: https://olympics.com/en/news/uefa-champions-league-ucl-winners-list-football-club-teams and soccer prime: https://soccerprime.com/ballon-dor-winners/
+### Media
 
+- All images on this website including the favicon are images downloaded from [google](https://www.google.com/) then cropped.
 
+### Text Content
+
+- The answers to the World Cup questions are from [fox sport](https://www.foxsports.com/soccer/2022-fifa-world-cup/history)
+
+- The answers to the AFCON questions are from [topend sports](https://www.topendsports.com/events/soccer/africa-cup-nations/winners-list.htm)
+
+- The answers to our Ballon D'or questions are from  [Olympics](https://olympics.com/en/news/uefa-champions-league-ucl-winners-list-football-club-teams)
+
+-  At [Soccer prime](https://soccerprime.com/ballon-dor-winners/) we have list of Ballon D'or winners and years.
+
+### Code
+
+- Got ideas about how to get the value of a radio button in form from [Stack Overflow](https://stackoverflow.com/questions/9618504/how-to-get-the-selected-radio-button-s-value)

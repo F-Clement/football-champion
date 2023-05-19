@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     submitUserName.addEventListener("click", submit);
 
 });
+
+
 // Here we declare arrays to keep count of the random generated years to avoid repeats.
 const wcYears = [];
 const afconYears = [];
@@ -40,6 +42,19 @@ function submit() {
         alert("Welcome to Football Champions");
         document.getElementById("username").innerHTML = `${user}`;
         document.getElementById("user").value = "";
+        document.getElementById("howToPlay").innerHTML = ``;
+
+        let menu = document.getElementById("gameButtons");
+        let btns = menu.getElementsByClassName("btn");
+        for (let i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+
+
         firstGame();
     }
 }
@@ -54,8 +69,7 @@ function firstGame() {
         const tournament = "WorldCup";
         const worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
         if (wcYears.length === 6) {
-            alert(`World Cup Questions Done. Moving To AFCON`);
-            secondGame();
+            alert(`Done! Click on the AFCON image to move to the corresponding questions`);
         } else if (wcYears.includes(worldCupYear)) {
             firstGame();
         } else {
@@ -73,11 +87,10 @@ function secondGame() {
         alert("You must submit a user name to play");
     } else {
 
-        const tournament = "AFCON"; 
+        const tournament = "AFCON";
         const afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
         if (afconYears.length === 7) {
-            alert(`World Cup Questions Done. Moving To Champions League`);
-            thirdGame();
+            alert(`Done! Click on the Champions League image to move to the corresponding questions`);
         } else if (afconYears.includes(afconYear)) {
             secondGame();
         } else {
@@ -97,7 +110,7 @@ function thirdGame() {
         const tournament = "ChampionsLeague";
         const champLeagueYear = Math.floor(Math.random() * 13) + 2010;
         if (cLeagueYears.length === 13) {
-            alert(`Champions Leage Questions Done. Moving to Ballon D'or.`);
+            alert(`Done! Click on Ballon D'or image to move to the corresponding`);
             fourthGame();
         } else if (cLeagueYears.includes(champLeagueYear)) {
             thirdGame();
@@ -118,14 +131,14 @@ function fourthGame() {
         const tournament = "BallonDor";
         const ballonDorYear = Math.floor(Math.random() * 11) + 2012;
         if (ballonDorYears.length === 11) {
-            alert("You are done with Ballon D'or questions. Checking... for questions not attended to.");
+            alert("Done! Checking... for questions not attended to.");
             firstGame();
         } else if (ballonDorYears.includes(ballonDorYear)) {
             fourthGame();
         } else {
             ballonDorYears.push(ballonDorYear);
             ballonDorQuestions(ballonDorYear, tournament);
-        }  
+        }
     }
 }
 /**
@@ -316,13 +329,13 @@ function checkAnswer() {
                 default:
                     document.getElementById("champions-image").innerHTML = `NOT AWARDED`;
             }
-            if (correctAnswer[1] === "WorldCup"){
+            if (correctAnswer[1] === "WorldCup") {
                 firstGame();
-            }else if(correctAnswer[1] === "AFCON"){
+            } else if (correctAnswer[1] === "AFCON") {
                 secondGame();
-            }else if(correctAnswer[1] === "ChampionsLeague"){
+            } else if (correctAnswer[1] === "ChampionsLeague") {
                 thirdGame();
-            }else{
+            } else {
                 fourthGame();
             }
 
@@ -330,7 +343,7 @@ function checkAnswer() {
             const pass = parseInt(document.getElementById("correctAnswers").innerText);
             const fail = parseInt(document.getElementById("incorrectAnswers").innerText);
             const unanswered = 35 - (pass + fail);
-            const finalScore = parseInt((pass * 100)/35)
+            const finalScore = parseInt((pass * 100) / 35);
             if (pass > fail) {
                 document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct, ${fail} incorrect answer(s)
                 and ${unanswered} unanswered questions.
@@ -339,7 +352,7 @@ function checkAnswer() {
                  Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
-                document.getElementById("correctionArea").innerHTML="";
+                document.getElementById("correctionArea").innerHTML = "";
 
             } else {
                 document.getElementById("questions").innerHTML = `<br> <h2>You had ${pass} answer(s) correct, ${fail} incorrect answer(s)
@@ -349,7 +362,7 @@ function checkAnswer() {
                  Final Score: ${finalScore}%</h2>
                 <br>
                 <h3><a href="index.html"> Play Again </a>`;
-                document.getElementById("correctionArea").innerHTML="";    
+                document.getElementById("correctionArea").innerHTML = "";
             }
         }
     }
@@ -365,7 +378,7 @@ function incrementCorrectAnswer() {
  * Increment correct answer count after user submits answer
  */
 function incrementIncorrectAnswer() {
-    let  currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
+    let currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
     document.getElementById("incorrectAnswers").innerText = ++currentIncorrectScore;
 }
 /**
@@ -439,4 +452,5 @@ function ballonDorQuestions(ballonDorYear, tournament) {
             <input type="radio" name="answer" id="Not Awarded" value="Not Awarded"><label for="answer">Not Awarded</label>
         </form>`;
 }
+
 

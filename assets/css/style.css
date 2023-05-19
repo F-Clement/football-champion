@@ -6,10 +6,12 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: lato, sans-serif;
     font-weight: bold;
 }
+
 /* Styling our heading */
 .heading {
     line-height: 75px;
@@ -17,15 +19,18 @@ body {
     font-family: "Bruno Ace SC", sans-serif;
     font-size: 270%;
 }
+
 /* Styles for our logo */
 a {
     text-decoration: none;
 }
+
 .logo {
     padding-right: 10px;
     height: 40px;
     width: 40px;
 }
+
 /* add style to our game div */
 .game {
     width: 55%;
@@ -35,6 +40,7 @@ a {
     border: 2px solid black;
     background-color: rgb(247, 244, 244);
 }
+
 .tournaments {
     float: left;
     width: 12%;
@@ -43,9 +49,18 @@ a {
     overflow-y: auto;
     overflow-x: auto;
 }
-figcaption{
-    text-align:center;
+
+figcaption {
+    text-align: center;
 }
+
+.active {
+    background-color: grey;
+    border: 1px solid black;
+    color: white;
+    border-radius: 5%;
+}
+
 /* styles for images */
 .tournaments img {
     padding: 5px;
@@ -54,17 +69,21 @@ figcaption{
     margin-right: auto;
     box-sizing: border-box;
 }
+
 #hero-image {
     width: 100%;
     height: 30vh;
 }
+
 #champions-image {
     height: 25vh;
     overflow-x: auto;
 }
+
 #football-champions {
     height: 175px;
 }
+
 .play-game {
     float: right;
     width: 87%;
@@ -72,21 +91,25 @@ figcaption{
     box-sizing: border-box;
     background-color: rgb(247, 244, 244);
 }
+
 /* Style user and score section */
 .user-and-score {
     width: 100%;
     height: 9vh;
     border-bottom: 2px solid black;
 }
+
 .username {
     width: 70%;
     float: left;
     box-sizing: border-box;
     padding-left: 4px;
 }
+
 .user-score {
     width: 30%;
 }
+
 /*Style for question and answer section*/
 .questions {
     text-align: center;
@@ -95,12 +118,15 @@ figcaption{
     color: black;
     margin: 10px 0;
 }
+
 .question-answer-area {
     background-color: rgb(247, 244, 244);
 }
+
 #answers {
     text-align: center;
 }
+
 .submit-answer {
     display: block;
     height: 50px;
@@ -110,6 +136,7 @@ figcaption{
     margin-top: 10px;
     background-color: rgb(247, 244, 244);
 }
+
 /* Styles for correction area */
 .correction {
     padding: 2px;
@@ -117,22 +144,26 @@ figcaption{
     height: 25vh;
     background-color: rgb(247, 244, 244);
 }
+
 #correction {
     font-size: 110%;
     font-weight: bold;
 }
+
 .correct-answer {
     display: block;
     float: left;
     width: 40%;
     box-sizing: border-box;
 }
+
 .correct-answer-image {
     float: right;
     width: 60%;
     height: 24vh;
     box-sizing: border-box;
 }
+
 /* Style review area */
 .reviews {
     margin-top: 2px;
@@ -143,11 +174,13 @@ figcaption{
     box-sizing: border-box;
     overflow: auto;
 }
+
 .submit-review {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
 /* Style buttons */
 button:hover {
     background-color: grey;
@@ -155,6 +188,7 @@ button:hover {
     color: white;
     border-radius: 5%;
 }
+
 .login,
 .signup,
 .submit-answer,
@@ -164,6 +198,7 @@ button:hover {
     background-color: rgb(192, 205, 215);
     color: rgb(26, 66, 76);
 }
+
 /* Styles for our help page */
 .help {
     width: 55%;
@@ -171,13 +206,16 @@ button:hover {
     margin-right: auto;
     background-color: rgb(192, 205, 215);
 }
-.playNow{
+
+.playNow {
     text-align: right;
-    margin-right: 10px;   
+    margin-right: 10px;
 }
-.howtoplay{
+
+.howtoplay {
     text-align: center;
 }
+
 /* Adding media queries for responsiveness */
 
 /* Media query for max screen size of 1200px */
@@ -187,6 +225,7 @@ button:hover {
         margin-left: auto;
         margin-right: auto;
     }
+
     .tournaments {
         float: left;
         width: 10%;
@@ -195,6 +234,7 @@ button:hover {
         overflow-y: auto;
         overflow-x: auto;
     }
+
     .play-game {
         float: right;
         width: 89%;
@@ -211,6 +251,7 @@ button:hover {
         margin-left: auto;
         margin-right: auto;
     }
+
     .tournaments {
         float: left;
         width: 14%;
@@ -219,6 +260,7 @@ button:hover {
         overflow-y: auto;
         overflow-x: hidden;
     }
+
     .play-game {
         float: right;
         width: 85%;
@@ -227,6 +269,7 @@ button:hover {
         background-color: rgb(247, 244, 244);
     }
 }
+
 /* Media query for screen size of maximum 700px */
 @media screen and (max-width: 700px) {
     .game {
@@ -234,6 +277,7 @@ button:hover {
         margin-left: auto;
         margin-right: auto;
     }
+
     .tournaments {
         float: left;
         width: 14%;
@@ -242,6 +286,7 @@ button:hover {
         overflow-y: auto;
         overflow-x: hidden;
     }
+
     .play-game {
         float: right;
         width: 85%;
@@ -258,17 +303,20 @@ button:hover {
         height: 40px;
         width: 40px;
     }
+
     .logo,
     .heading {
         line-height: 40px;
         background-color: rgb(247, 244, 244);
     }
+
     .game {
         width: 100%;
         height: 100%;
         margin-left: auto;
         margin-right: auto;
     }
+
     .tournaments {
         width: 100%;
         display: flex;
@@ -279,18 +327,21 @@ button:hover {
         overflow-x: auto;
         background-color: rgb(247, 244, 244);
     }
+
     .tournaments>div {
         display: inline-block;
         width: 15%;
         height: 14vh;
         margin-right: 10%;
     }
+
     .tournaments img {
         padding: 5px;
         margin-left: auto;
         margin: 2px;
         box-sizing: border-box;
     }
+
     .play-game {
         display: block;
         width: 100%;
@@ -299,26 +350,32 @@ button:hover {
         box-sizing: border-box;
         background-color: rgb(247, 244, 244);
     }
+
     .username {
         width: 50%;
         float: left;
         box-sizing: border-box;
         padding: 4px;
     }
+
     .user-score {
         width: 50%;
         float: right;
     }
+
     .question-answer-area {
         width: 100%;
     }
+
     input {
         margin-left: 5px;
     }
+
     .questions {
         text-align: center;
         line-height: 5vh;
     }
+
     .submit-answer {
         margin-top: 20px;
         margin-left: auto;
@@ -328,16 +385,19 @@ button:hover {
         background-color: rgb(192, 205, 215);
         color: rgb(26, 66, 76);
     }
+
     #champions-image {
         width: 392px;
         padding-right: 5px;
         overflow-x: auto;
     }
+
     #football-champions {
         width: 392px;
         height: 175px;
         object-fit: fill;
     }
+
     .correct-answer {
         display: block;
         width: 100%;
@@ -350,5 +410,13 @@ button:hover {
         width: 100%;
         box-sizing: border-box;
         overflow: auto;
+    }
+
+    .help {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 4px;
+        background-color: rgb(192, 205, 215);
     }
 }
