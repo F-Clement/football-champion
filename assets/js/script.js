@@ -70,7 +70,6 @@ function firstGame() {
         const tournament = "WorldCup";
         const worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
         if (wcYears.length === 6) {
-            alert(`Done with World Cup questions.Move to AFCON by clicking the AFCON Image.`);
             document.getElementById("submitAnswer").disabled = true;
             document.getElementById("afconBtn").disabled = false;
         } else if (wcYears.includes(worldCupYear)) {
@@ -95,7 +94,6 @@ function secondGame() {
         const afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
         if (afconYears.length === 7) {
             document.getElementById("cLeagueBtn").disabled = false;
-            alert(`Done! Click on the Champions League image to move to the corresponding questions`);
             document.getElementById("submitAnswer").disabled = true;
             document.getElementById("cLeagueBtn").disabled = false;
         } else if (afconYears.includes(afconYear)) {
@@ -120,7 +118,6 @@ function thirdGame() {
         const champLeagueYear = Math.floor(Math.random() * 13) + 2010;
         if (cLeagueYears.length === 13) {
             document.getElementById("ballonDorBtn").disabled = false;
-            alert(`Done! Click on Ballon D'or image to move to the corresponding`);
             document.getElementById("submitAnswer").disabled = true;
             document.getElementById("ballonDorBtn").disabled = false;
         } else if (cLeagueYears.includes(champLeagueYear)) {
@@ -144,7 +141,7 @@ function fourthGame() {
         const tournament = "BallonDor";
         const ballonDorYear = Math.floor(Math.random() * 11) + 2012;
         if (ballonDorYears.length === 11) {
-            alert("Done! Checking... for questions not attended to.");
+            alert("Done! Let's see how you performed.");
         } else if (ballonDorYears.includes(ballonDorYear)) {
             fourthGame();
         } else {
@@ -376,6 +373,18 @@ function checkAnswer() {
                 <h3><a href="index.html"> Play Again </a>`;
                 document.getElementById("correctionArea").innerHTML = "";
             }
+        }
+        if (sum === 6) {
+            document.getElementById("directives").innerHTML = `<h2><center>Click on AFCON image to continue.</center></h2>`;
+
+        } else if (sum === 13) {
+            document.getElementById("directives").innerHTML = `<h2><center>Click on CLeague image to continue.</center></h2>`;
+
+        } else if (sum === 26) {
+            document.getElementById("directives").innerHTML = `<h2><center>Click on Ballon D'or image to continue.</center></h2>`;
+
+        } else {
+            document.getElementById("directives").innerHTML = "";
         }
     }
 }
