@@ -14,7 +14,6 @@ const cLeagueYears = [];
 const ballonDorYears = [];
 
 // Event listeners for our tournaments and submit buttons
-
 const worldCupBtn = document.getElementById("worldCupBtn");
 worldCupBtn.addEventListener("click", firstGame);
 
