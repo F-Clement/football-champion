@@ -45,6 +45,7 @@ function submit() {
         document.getElementById("username").innerHTML = `${user}`;
         document.getElementById("user").value = "";
         document.getElementById("howToPlay").innerHTML = ``;
+        document.getElementById("reviewbtn").disabled = true;
 
         // Highlighting the tournament we are currently on.
         // Got this code from stack overflow then made a few modifications to fit our need.
@@ -158,17 +159,12 @@ function fourthGame() {
  * Verifies a user is not submitting and empty text for review before confirming review submitted
  */
 function reviews() {
-    const userinfo = document.getElementById("username").textContent;
-    if (userinfo === "") {
-        alert("You must submit a user name to play");
+    const review = document.getElementById("reviews").value;
+    if (review === "") {
+        document.getElementById("reviewUs").innerHTML = `<p><center>Your review will really help us improve. Please share your experience</center></p>`;
     } else {
-        const review = document.getElementById("reviews").value;
-        if (review === "") {
-            alert("You are trying to submit an empty feedback.");
-        } else {
-            alert("Review submitted.");
-        }
-        firstGame();
+        document.getElementById("reviewUs").innerHTML = `<p><center>Review submitted. Thank you.</center></p>`;
+        document.getElementById("reviews").value = "";
     }
 }
 /**
@@ -382,6 +378,8 @@ function checkAnswer() {
         } else if (sum === 26) {
             document.getElementById("directives").innerHTML = `<h2><center>Click on Ballon D'or image to continue.<br></center></h2>`;
 
+        } else if (sum === 35) {
+            return;
         } else {
             document.getElementById("directives").innerHTML = "";
         }
