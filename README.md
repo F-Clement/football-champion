@@ -185,3 +185,4 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 ### Code
 
 - Got ideas about how to get the value of a radio button in form from [Stack Overflow](https://stackoverflow.com/questions/9618504/how-to-get-the-selected-radio-button-s-value)
+-  Looked up on [Stack Overflow](https://stackoverflow.com/questions/60365272/display-current-button-of-multiple-set-of-buttons) for how to highlight which tournament user is onn.

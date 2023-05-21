@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const submitUserName = document.getElementById("login");
     submitUserName.addEventListener("click", submit);
+    document.getElementById("worldCupBtn").disabled = true;
+    document.getElementById("afconBtn").disabled = true;
+    document.getElementById("cLeagueBtn").disabled = true;
+    document.getElementById("ballonDorBtn").disabled = true;
 
 });
-
-
 // Here we declare arrays to keep count of the random generated years to avoid repeats.
 const wcYears = [];
 const afconYears = [];
@@ -44,6 +46,7 @@ function submit() {
         document.getElementById("user").value = "";
         document.getElementById("howToPlay").innerHTML = ``;
 
+        // Highlighting the tournament we are currently on.
         let menu = document.getElementById("gameButtons");
         let btns = menu.getElementsByClassName("btn");
         for (let i = 0; i < btns.length; i++) {
@@ -53,8 +56,6 @@ function submit() {
                 this.className += " active";
             });
         }
-
-
         firstGame();
     }
 }
@@ -69,7 +70,9 @@ function firstGame() {
         const tournament = "WorldCup";
         const worldCupYear = Math.floor(Math.random() * 6) * 4 + 2002;
         if (wcYears.length === 6) {
-            alert(`Done! Click on the AFCON image to move to the corresponding questions`);
+            alert(`Done with World Cup questions.Move to AFCON by clicking the AFCON Image.`);
+            document.getElementById("submitAnswer").disabled = true;
+            document.getElementById("afconBtn").disabled = false;
         } else if (wcYears.includes(worldCupYear)) {
             firstGame();
         } else {
@@ -82,15 +85,19 @@ function firstGame() {
  * This function will call function will generate random years without repeating for our AFCON questions
  */
 function secondGame() {
+    document.getElementById("afconBtn").disabled = true;
+    document.getElementById("submitAnswer").disabled = false;
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
     } else {
-
         const tournament = "AFCON";
         const afconYear = Math.floor(Math.random() * 7) * 2 + 2000;
         if (afconYears.length === 7) {
+            document.getElementById("cLeagueBtn").disabled = false;
             alert(`Done! Click on the Champions League image to move to the corresponding questions`);
+            document.getElementById("submitAnswer").disabled = true;
+            document.getElementById("cLeagueBtn").disabled = false;
         } else if (afconYears.includes(afconYear)) {
             secondGame();
         } else {
@@ -103,6 +110,8 @@ function secondGame() {
  * This function will call function will generate random years without repeating for our Champions Leage questions.
  */
 function thirdGame() {
+    document.getElementById("cLeagueBtn").disabled = true;
+    document.getElementById("submitAnswer").disabled = false;
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -110,8 +119,10 @@ function thirdGame() {
         const tournament = "ChampionsLeague";
         const champLeagueYear = Math.floor(Math.random() * 13) + 2010;
         if (cLeagueYears.length === 13) {
+            document.getElementById("ballonDorBtn").disabled = false;
             alert(`Done! Click on Ballon D'or image to move to the corresponding`);
-            fourthGame();
+            document.getElementById("submitAnswer").disabled = true;
+            document.getElementById("ballonDorBtn").disabled = false;
         } else if (cLeagueYears.includes(champLeagueYear)) {
             thirdGame();
         } else {
@@ -124,6 +135,8 @@ function thirdGame() {
  * This function will call function generate random years without repeating for our Ballon D'or questions 
  */
 function fourthGame() {
+    document.getElementById("ballonDorBtn").disabled = true;
+    document.getElementById("submitAnswer").disabled = false;
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -132,7 +145,6 @@ function fourthGame() {
         const ballonDorYear = Math.floor(Math.random() * 11) + 2012;
         if (ballonDorYears.length === 11) {
             alert("Done! Checking... for questions not attended to.");
-            firstGame();
         } else if (ballonDorYears.includes(ballonDorYear)) {
             fourthGame();
         } else {
@@ -247,7 +259,7 @@ function checkAnswer() {
             incrementCorrectAnswer();
         } else if (userAnswer === "") {
             document.getElementById("correction").innerText = "Select at least one answer from the answers above.";
-            incrementIncorrectAnswer();
+            return "User must select answer";
         } else {
             document.getElementById("correction").innerText = `Ohh No!. The correct answer is ${correct}`;
             incrementIncorrectAnswer();
@@ -367,12 +379,14 @@ function checkAnswer() {
         }
     }
 }
+
 /**
  * Increment incorrect answer count after user submits answer
  */
 function incrementCorrectAnswer() {
     let currentCorrectScore = parseInt(document.getElementById("correctAnswers").innerText);
     document.getElementById("correctAnswers").innerText = ++currentCorrectScore;
+
 }
 /**
  * Increment correct answer count after user submits answer
@@ -380,6 +394,7 @@ function incrementCorrectAnswer() {
 function incrementIncorrectAnswer() {
     let currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
     document.getElementById("incorrectAnswers").innerText = ++currentIncorrectScore;
+
 }
 /**
  * Generate questions for world cup game using some randomly generated years.
@@ -390,7 +405,7 @@ function worldCupQuestions(worldCupYear, tournament) {
     document.getElementById("year").textContent = worldCupYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form id="answer">
+        `<form name="suggestedAnswers" id="answer">
             <input type="radio" name="answer" id="Brazil" value="Brazil" required><label for="answer">Brazil</label>
             <input type="radio" name="answer" id="Italy" value="Italy"><label for="answer">Italy</label>
             <input type="radio" name="answer" id="Spain" value="Spain"><label for="answer">Spain</label>
@@ -408,7 +423,7 @@ function afconQuestions(afconYear, tournament) {
     document.getElementById("year").textContent = afconYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form id = "answer">
+        `<form name="suggestedAnswers" id = "answer">
             <input type="radio" name="answer" id="Cameroon" value="Cameroon" required><label for="answer">Cameroon</label>
             <input type="radio" name="answer" id="Tunisia" value="Tunisia"><label for="answer">Tunisia</label>
             <input type="radio" name="answer" id="Egypt" value="Egypt"><label for="answer">Egypt</label>
@@ -426,7 +441,7 @@ function championsLeagueQuestions(champLeagueYear, tournament) {
     document.getElementById("year").textContent = champLeagueYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form id = "answer">
+        `<form name="suggestedAnswers" id = "answer">
             <input type="radio" name="answer" id="Barcelona" value="Barcelona" required><label for="answer">Barcelona</label>
             <input type="radio" name="answer" id="Real Madrid" value="Real Madrid"><label for="answer">Real Madrid</label>
             <input type="radio" name="answer" id="Inter Milan" value="Inter Milan"><label for="answer">Inter Milan</label>
@@ -444,7 +459,7 @@ function ballonDorQuestions(ballonDorYear, tournament) {
     document.getElementById("year").textContent = ballonDorYear;
     document.getElementById("tournament").textContent = tournament;
     document.getElementById("answers").innerHTML =
-        `<form id="answer">
+        `<form name="suggestedAnswers" id="answer">
             <input type="radio" name="answer" id="Lionel Messi" value="Lionel Messi" required><label for="answer">Lionel Messi</label>
             <input type="radio" name="answer" id="Christiano Ronaldo" value="Christiano Ronaldo"><label for="answer">Christiano Ronaldo</label>
             <input type="radio" name="answer" id="Luka Modrić" value="Luka Modrić"><label for="answer">Luka Modrić</label>

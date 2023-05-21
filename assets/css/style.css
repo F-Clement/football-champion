@@ -55,7 +55,7 @@ figcaption {
 }
 
 .active {
-    background-color: grey;
+    background-color: rgb(192, 205, 215);
     border: 1px solid black;
     color: white;
     border-radius: 5%;
@@ -170,7 +170,7 @@ figcaption {
     float: left;
     display: block;
     width: 40%;
-    height: 14vh;
+    height: 17.5vh;
     box-sizing: border-box;
     overflow: auto;
 }
@@ -183,9 +183,10 @@ figcaption {
 
 /* Style buttons */
 button:hover {
-    background-color: grey;
+    background-color: rgb(192, 205, 215);
     border: 1px solid black;
-    color: white;
+    color: black;
+    font-size: medium;
     border-radius: 5%;
 }
 
