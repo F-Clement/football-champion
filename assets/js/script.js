@@ -47,6 +47,7 @@ function submit() {
         document.getElementById("howToPlay").innerHTML = ``;
 
         // Highlighting the tournament we are currently on.
+        // Got this code from stack overflow then made a few modifications to fit our need.
         let menu = document.getElementById("gameButtons");
         let btns = menu.getElementsByClassName("btn");
         for (let i = 0; i < btns.length; i++) {
@@ -87,7 +88,6 @@ function secondGame() {
     document.getElementById("afconBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
     document.getElementById("directives").innerHTML = "";
-
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -113,7 +113,6 @@ function thirdGame() {
     document.getElementById("cLeagueBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
     document.getElementById("directives").innerHTML = "";
-
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -139,7 +138,6 @@ function fourthGame() {
     document.getElementById("ballonDorBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
     document.getElementById("directives").innerHTML = "";
-
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -178,7 +176,6 @@ function reviews() {
  * @returns champions for a random year and the tournament
  */
 function searchAnswer() {
-
     const tournament = document.getElementById('tournament').innerText;
     const year = document.getElementById('year').innerText;
 
@@ -191,7 +188,6 @@ function searchAnswer() {
             2018: 'France',
             2022: 'Argentina',
         };
-
         return [(worldCupChampions[year]), "WorldCup"];
     } else if (tournament === "AFCON") {
         const afconChampions = {
@@ -202,7 +198,6 @@ function searchAnswer() {
             2008: 'Egypt',
             2010: 'Egypt',
             2012: 'Zambia',
-
         };
         return [(afconChampions[year]), "AFCON"];
     } else if (tournament === "ChampionsLeague") {
@@ -241,7 +236,6 @@ function searchAnswer() {
         alert(`Tournament Uknown`);
         throw (`Unknown tournament! Aborting....`);
     }
-
 }
 /**
  * Compare submitted answer and answer from searchanswer() function then calls a function to increment
@@ -353,7 +347,6 @@ function checkAnswer() {
             } else {
                 fourthGame();
             }
-
         } else {
             const pass = parseInt(document.getElementById("correctAnswers").innerText);
             const fail = parseInt(document.getElementById("incorrectAnswers").innerText);
@@ -401,7 +394,6 @@ function checkAnswer() {
 function incrementCorrectAnswer() {
     let currentCorrectScore = parseInt(document.getElementById("correctAnswers").innerText);
     document.getElementById("correctAnswers").innerText = ++currentCorrectScore;
-
 }
 /**
  * Increment correct answer count after user submits answer
@@ -409,7 +401,6 @@ function incrementCorrectAnswer() {
 function incrementIncorrectAnswer() {
     let currentIncorrectScore = parseInt(document.getElementById("incorrectAnswers").innerText);
     document.getElementById("incorrectAnswers").innerText = ++currentIncorrectScore;
-
 }
 /**
  * Generate questions for world cup game using some randomly generated years.

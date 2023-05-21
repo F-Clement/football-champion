@@ -2,11 +2,11 @@
 
 URL: https://f-clement.github.io/football-champion/
 
-Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using random years.
+Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. The test always starts with the world cup questions and then move to the AFCON questions when user has finished answering the World Cup questions. After the user is done with the AFCON questions he or she moves to the Champions Leagues questions and so on to the Ballon D'Or questions. At the end the user's score is published as a percentage. There are 6 questions for the World Cup, 7 questions for the AFCON, 13 questions for the Champions League and 9 Ballon D'Or questions. For each user, the questions for each tournament are asked randomly.
 ![Football Champions](assets/images/footballchampions.png)
 ## Design
 
-Wuse [Figma](figma.com) to design two different display of this website. We have a desktop display which is thesame when you use a tablet, and a mobile phone display.
+We used [Figma](figma.com) to design two different displays of this website. We have a desktop display which is thesame when you use a tablet, and a mobile phone display.
 
 - Destop display
 ![Desktop design](assets/images/desktop-design.png)
@@ -56,6 +56,13 @@ No errors were returned when passing through the official [W3C validator](https:
 No errors were found when passing through the official [(Jigsaw) validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ff-clement.github.io%2Ffootball-champion%2F)
 
 - [jshint](https://jshint.com/) :No errors. A couple of version control warnings.
+
+#### Lighthouse Testing
+- Desktop
+ ![Desktop Results](assets/images/lighthouse-desktop.png)
+
+- Mobile
+  ![Mobile Results](assets/images/lighthouse-mobile.png)
 
   - In the table below you can see other test done manually.
 
@@ -212,11 +219,9 @@ No errors were found when passing through the official [(Jigsaw) validator](http
         <td>After use answers last question in Ballon D'Or set of questions</td>
         <td>User's score should be displayed as a percentage</td>
         <td>Pass</td>
-    </tr>
-   
-
-    
+    </tr>  
 </table>
+
 #### Testing Responsivenes
 
 - Below is an image showing the display of the website on various screen sizes.
