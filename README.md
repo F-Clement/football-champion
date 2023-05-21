@@ -2,7 +2,7 @@
 
 URL: https://f-clement.github.io/football-champion/
 
-Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using radom years.
+Football champions is a website that intends to test the knowledge of football lovers. It does this by asking who were the champions for a particular year and tournament. The tournaments included are the World Cup, The African Nations Cup (AFCON) the Champions League and the Ballon D'or awards. So the user has the ability to select the tournament he will like to test his knowledge on then the questions are asked using random years.
 ![Football Champions](assets/images/footballchampions.png)
 ## Design
 
@@ -22,7 +22,7 @@ This side bar is were you will find the various tournaments you can play. It con
 ![Side Bar](assets/images/side-bar.png)
 
 #### Username and Score
-Here we intend for the user to be able to login into and account before playing to game. This feature is positioned to to right. So user inputs his or her name then click on the login button. To the right we have a score counter. Where for each correct or incorrect answer the user submits, the counter increments the score.
+Here we intend for the user to be able to submit a username(located to the left) before getting access to questions. Then to the right is the feature to keep count of the score. So user inputs his or her name then click on the submit button. For each correct or incorrect answer the user submits, the counter increments the score respectively.
 ![Username and Score](assets/images/user-score-area.png)
 
 #### Main Image
@@ -47,6 +47,7 @@ a set of simple instructions to follow.
 
 ## Testing
 This website has been tested firstly on different screen sizes to improve user experience. On tablets, laptops and other bigger screens we have a side bar with the different tournaments serving as sets of questions. But on smaller screen sizes like phones there is no side bar. We have these tournaments on the top as a menu.
+
 #### Validator Testing
 - HTML
 No errors were returned when passing through the official [W3C validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ff-clement.github.io%2Ffootball-champion%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
@@ -145,10 +146,76 @@ No errors were found when passing through the official [(Jigsaw) validator](http
         <td>Pass</td>
     </tr>
     <tr>
-        <td>Submit ans answer</td>
+        <td>Submit and answer</td>
         <td>User is told the correct answer with a corresponding image to support the answer.</td>
         <td>Pass</td>
     </tr> 
+    <tr>
+        <td>Click on AFCON when you are not done with world cup questions</td>
+        <td>Button does not work</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on C-League when you are not done with world cup questions</td>
+        <td>Button does not work</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on Ballon D'or when you are not done with world cup questions</td>
+        <td>Button does not work</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on AFCON when you just finished with world cup questions</td>
+        <td>Button works just once then, stops working</td>
+        <td>Pass</td>
+    </tr>
+    <tr>
+        <td>Click on World Cup, C-League or Ballon D'Or button when answering AFCON questions</td>
+        <td>The buttons don't work</td>
+        <td>Pass</td>
+    </tr><tr>
+        <td>click on C-League when you just finished answering AFCON questions</td>
+        <td>Button works once and then stops</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>Clicking on World Cup, AFCOn or Ballon D'Or buttons when answering C-League questions</td>
+        <td>The Buttons don't work</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>Click on Ballon D'Or just after you finish with C-League questions</td>
+        <td>Buttons worls once and then is disabled.</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>Click on World Cup, AFCON or C-League when answering Ballon D'Or questions.</td>
+        <td>The buttons don't work</td>
+        <td>Pass</td>
+    <tr>
+        <td>Clicking Submit Answer after the World Cup questions are finished and user has not clicked on AFCON</td>
+        <td>Button is disabled</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>Clicking on Submit Answer after the AFCON question are finished and user has not clicked on C-League</td>
+        <td>Button does not work</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>Clicking on Submit Answer after the C-League questions are finished and user has not clicked on Ballon D'Or</td>
+        <td>Button does not work</td>
+        <td>Pass</td>
+    </tr>
+    </tr><tr>
+        <td>After use answers last question in Ballon D'Or set of questions</td>
+        <td>User's score should be displayed as a percentage</td>
+        <td>Pass</td>
+    </tr>
+   
+
+    
 </table>
 #### Testing Responsivenes
 

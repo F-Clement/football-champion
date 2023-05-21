@@ -86,6 +86,8 @@ function firstGame() {
 function secondGame() {
     document.getElementById("afconBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
+    document.getElementById("directives").innerHTML = "";
+
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -110,6 +112,8 @@ function secondGame() {
 function thirdGame() {
     document.getElementById("cLeagueBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
+    document.getElementById("directives").innerHTML = "";
+
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -134,6 +138,8 @@ function thirdGame() {
 function fourthGame() {
     document.getElementById("ballonDorBtn").disabled = true;
     document.getElementById("submitAnswer").disabled = false;
+    document.getElementById("directives").innerHTML = "";
+
     const userinfo = document.getElementById("username").textContent;
     if (userinfo === "") {
         alert("You must submit a user name to play");
@@ -375,13 +381,13 @@ function checkAnswer() {
             }
         }
         if (sum === 6) {
-            document.getElementById("directives").innerHTML = `<h2><center>Click on AFCON image to continue.</center></h2>`;
+            document.getElementById("directives").innerHTML = `<h2><center>Click on AFCON image to continue.<br></center></h2>`;
 
         } else if (sum === 13) {
-            document.getElementById("directives").innerHTML = `<h2><center>Click on CLeague image to continue.</center></h2>`;
+            document.getElementById("directives").innerHTML = `<h2><center>Click on CLeague image to continue.<br></center></h2>`;
 
         } else if (sum === 26) {
-            document.getElementById("directives").innerHTML = `<h2><center>Click on Ballon D'or image to continue.</center></h2>`;
+            document.getElementById("directives").innerHTML = `<h2><center>Click on Ballon D'or image to continue.<br></center></h2>`;
 
         } else {
             document.getElementById("directives").innerHTML = "";
